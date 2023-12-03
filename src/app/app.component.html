@@ -1,4 +1,12 @@
-<app-menu [darkMode]="router.url !== '/'"></app-menu>
-<div [class.container]="router.url !== '/'">
-    <router-outlet></router-outlet>
+<div class="mainContainer">
+    <app-menu [darkMode]="router.url !== '/'"></app-menu>
+
+    <!-- <div [class.container]="router.url !== '/'">
+        <router-outlet></router-outlet>
+    </div> -->
+    
+    <app-header></app-header>
+    <app-about-me></app-about-me>
+    <app-skills></app-skills>
+    <app-portfolio></app-portfolio>
 </div>
