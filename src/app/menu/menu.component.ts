@@ -6,5 +6,12 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
-  @Input() darkMode = true;
+  @Input() darkMode = false;
+
+  currentTab = "";
+
+  activeTab(acitveTab:any) {
+    
+    this.activeTab = acitveTab;
+  }
 }

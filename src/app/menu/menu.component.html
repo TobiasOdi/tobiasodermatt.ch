@@ -1,22 +1,20 @@
 <header [class.headerDark]="darkMode" id="header">
-
-    <img *ngIf="!darkMode" routerLink="/" src="../../assets/img/logo.png">
-    <img *ngIf="darkMode" routerLink="/" src="../../assets/img/logo.png">
-
+    <img *ngIf="!darkMode" routerLink="/" src="../../assets/img/icons/logo blue.png">
+    <img *ngIf="darkMode" routerLink="/" src="../../assets/img/icons/logo.png">
 
     <div [class.darkLinks]="darkMode">      
         <!-- => Element erhält die Klasse darkLinks nur wenn die Variable darkMode 'true' ist -->
-        <a routerLink="/">About me</a>
-        <a routerLink="/">Skills</a>
-        <a routerLink="/">Portfolio</a>
-<!--         <a routerLink="/">Portfolio</a>
-        <a routerLink="/">Contact</a>
- -->
-<!--         <a routerLink="/imprint">Imprint</a>
-        <a routerLink="/data-protection">Data protection</a>
- -->
-
-<!--    <a href="#">Curriculum</a>
-        <a href="#">Projects</a> -->    
+        <div (click)="activeTab('aboutMe')">
+            <a routerLink="/">About me</a>
+            <div [class.blueLineMenu]="darkMode"></div>
+        </div>
+        <div (click)="activeTab('skillSet')">
+            <a routerLink="/">Skill set</a>
+            <div [class.blueLineMenu]="darkMode"></div>
+        </div>
+        <div (click)="activeTab('portfolio')">
+            <a routerLink="/">Portfolio</a>   
+            <div [class.blueLineMenu]="darkMode"></div>
+        </div>
     </div>
 </header>
