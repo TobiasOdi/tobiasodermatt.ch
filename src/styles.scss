@@ -11,3 +11,15 @@ body {
 .icon {
     cursor: pointer;
 }
+
+.button {
+    min-width: 137px;
+    height: 58px;
+    border-radius: 10px;
+    border: 2px solid #5988FF;
+    color: #5988FF;
+    padding: 15px 30px 15px 30px;
+    cursor: pointer;
+    font-size: 23px;
+    background-color: white;
+}
