@@ -1,0 +1,48 @@
+.contactContainer {
+    width: 100%;
+}
+
+.contactSubContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > div {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+}
+
+
+.contactSubContainer form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contactSubContainer form > input,
+.contactSubContainer form > textarea {
+    color: white;
+    font-size: 16px;
+    line-height: 19px;
+    border: 0 0 2px 0;
+    padding: 15px 25px 15px 25px;
+    gap: 10;
+    background-color: black;
+    outline: none;
+    height: 50px;
+    width: 500px;
+}
+
+.contactSubContainer form > div:last-of-type {
+    width: 500px;
+    display: flex!important;
+    flex-direction: row;
+}
