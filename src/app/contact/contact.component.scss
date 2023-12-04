@@ -46,3 +46,23 @@
     display: flex!important;
     flex-direction: row;
 }
+
+.upButton {
+    position: relative!important;
+}
+
+.upButton img {
+    position: absolute!important;
+    top: 0;
+    left: 0;
+}
+
+.defUpBtn {
+    background: url(../../assets/img/icons/defUpBtn.png) no-repeat;
+    height: 39px;
+    width: 39px;
+}
+
+.defUpBtn:hover {
+    background: url(../../assets/img/icons/hovUpBtn.png) no-repeat;
+}
