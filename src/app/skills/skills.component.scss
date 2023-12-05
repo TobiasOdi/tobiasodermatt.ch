@@ -7,10 +7,14 @@
     gap: 20px;
     padding-left: 2rem;
     padding-right: 2rem;
+    background: linear-gradient(128.94deg, #5988FF -33.96%, #5988FF 36.71%, #0043F0 112.25%);
 }
 
 .skillsTitle {
     font-size: 96px;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: bold;
+    color: white;
 }
 
 .skillsDescription {
@@ -26,12 +30,18 @@
 
     div, button {
         font-size: 23px;
+        color: white;
         cursor: pointer;
+    }
+
+    button {
+        color: #5988FF;
     }
 }
 
 .skillsIcons {
     width: 100%;
+    padding-bottom: 2rem;
 }
 
 .firstRow, 

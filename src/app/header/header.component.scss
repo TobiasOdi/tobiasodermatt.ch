@@ -1,22 +1,28 @@
 .headerContainer {
     width: 100%;
     display: flex;
-    flex-direction: column;
     justify-self: center;
-    align-items: flex-end;
-    gap: 100px;
-    padding-top: 80px;
+    align-items: center;
     padding-left: 2rem;
     padding-right: 2rem;
+    background-color: #EAF0FF;
+
+    > div {
+        width: 50%;
+    };
 }
 
 .profilePicture {
-    position: absolute;
-    top: 80px;
-    left: 32px;
-    height: 800px;
+    height: 600px;
     width: auto;
-    z-index: -1;
+}
+
+.headerSubContainer {
+    height: 600px!important;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
 }
 
 .greeting {
@@ -30,18 +36,63 @@
 .greeting > div:first-of-type {
     font-size: 64px;
     text-align: left;
-
+    color: #5988FF;
 }
 
-.greeting > div:last-of-type {
-    font-size: 128px;
-    text-align: left;
-}
-
-.icons {
+.greeting > div:last-of-type  {
     display: flex;
     flex-direction: column;
-    justify-self: center;
+    align-items: flex-start;
+    justify-content: center;
+
+    > div {
+        font-size: 120px;
+        color: #5988FF;
+        text-align: left;
+        font-family: 'Baloo 2', sans-serif;
+        font-weight: bold;
+        line-height: 0.8;
+    }
+}
+
+/* .greeting > div:last-of-type > div {
+} */
+
+.icons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-end;
     align-items: flex-end;
     gap: 15px;
+    padding: 5px;
+
+    > a > div {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+.defGitBtn {
+    background: url(../../assets/img/icons/defGitBtn.png) no-repeat;
+}
+
+.defGitBtn:hover {
+    background: url(../../assets/img/icons/hovGitBtn.png) no-repeat;
+}
+
+.defLinkBtn {
+    background: url(../../assets/img/icons/defLinkBtn.png) no-repeat;
+}
+
+.defLinkBtn:hover {
+    background: url(../../assets/img/icons/hovLinkBtn.png) no-repeat;
+}
+
+.defMailBtn {
+    background: url(../../assets/img/icons/defMailBtn.png) no-repeat;
+}
+
+.defMailBtn:hover {
+    background: url(../../assets/img/icons/hovMailBtn.png) no-repeat;
 }

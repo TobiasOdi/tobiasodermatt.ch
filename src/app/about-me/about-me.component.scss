@@ -3,7 +3,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 80px;
     padding-left: 2rem;
     padding-right: 2rem;
 }
@@ -17,6 +16,9 @@
 
     div:first-of-type {
         font-size: 121px;
+        font-family: 'Baloo 2', sans-serif;
+        font-weight: bold;
+        color: #5988FF;
     }
 
     div:last-of-type {
@@ -35,3 +37,5 @@
         width: auto;
     }
 }
+
+

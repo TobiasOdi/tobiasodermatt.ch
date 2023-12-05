@@ -10,13 +10,17 @@
 
 .portfolioTitle {
     font-size: 96px;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: bold;
+    color: #5988FF;
 }
 
 .portfolioDescription {
     font-size: 23px;
 }
 
-.projects{
+.projects {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,13 +28,39 @@
     gap: 20px;
 }
 
-.projects > div {
-    gap: 15px;
-}
+.project {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    > div {
+        width: 50%;
+    }
+
+    > div:last-of-type {
+        padding-left: 2rem;
+    }
+
+    > div:first-of-type {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    > div:first-of-type > img {
+        border: 1px solid black;
+        width: 100%;
+        height: auto;
+    }
+}
 
 .projects > div:nth-of-type(even) {
     flex-direction: row-reverse;
+}
+
+.projects > div:nth-of-type(even) > div:first-of-type {
+    justify-content: flex-start;
 }
 
 .projects > div:nth-of-type(even) > div:last-of-type {
@@ -38,21 +68,11 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
+    padding-right: 2rem;
 }
 
 .projects > div:nth-of-type(even) > div:last-of-type > div:last-of-type {
     text-align: right;
-}
-
-.project {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    div > img {
-        border: 1px solid black;
-    }
 }
 
 .projectTitle {

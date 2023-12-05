@@ -8,10 +8,23 @@ import { Component, Input } from '@angular/core';
 export class MenuComponent {
   @Input() darkMode = false;
 
-  currentTab = "";
+  @Input() aboutMe = true;
+  @Input() skillSet = false;
+  @Input() portfolio = false
 
   activeTab(acitveTab:any) {
-    
-    this.activeTab = acitveTab;
+    this.aboutMe = false;
+    this.skillSet = false;
+    this.portfolio = false
+
+    if(acitveTab == 'aboutMe') {
+      this.aboutMe = true;
+    } 
+    if(acitveTab == 'skillSet') {
+      this.skillSet = true;
+    } 
+    if(acitveTab == 'portfolio') {
+      this.portfolio = true;
+    }
   }
 }

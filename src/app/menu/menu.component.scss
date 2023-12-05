@@ -6,6 +6,7 @@ header {
     justify-content: space-between;
     padding-left: 2rem;
     padding-right: 2rem;
+    background-color: #EAF0FF;
 
     >div {
         display: flex;
@@ -14,7 +15,7 @@ header {
         gap: 2rem;
     }
 
-    img {
+    >img {
         height: 50px;
         cursor: pointer;
     }
@@ -27,6 +28,10 @@ header {
         &:hover {
             font-weight: bold;
         }
+    }
+
+    > div > div {
+        width: 130px;
     }
 }
 
@@ -50,5 +55,14 @@ header {
     height: 3px;
     background-color: #0043F0;
     border-radius: 0 2px 2px 0;
-    opacity: 0;
+}
+
+.burgerMenu {
+    display: none;
+    height: 30px!important;
+    width: 28px;
+}
+
+.selectedTab {
+    font-weight: bold;
 }
