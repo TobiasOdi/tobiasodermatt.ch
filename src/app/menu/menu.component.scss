@@ -27,6 +27,22 @@ header {
 
         &:hover {
             font-weight: bold;
+            animation: boldText 0.8s linear;
+        }
+
+        @keyframes boldText {
+            0% {
+                font-weight: 400;
+            }
+            25% {
+                font-weight: 500;
+            }
+            50% {
+                font-weight: 600;
+            }
+            100% {
+                font-weight: 700;
+            }
         }
     }
 
