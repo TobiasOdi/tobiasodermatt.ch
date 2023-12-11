@@ -7,15 +7,21 @@
             <div>Need a Frontend developer? Contact me!</div>
         </div>
         <div>
-            <form action="">
+            <form class="contactForm" action="">
                 <input type="text" name="name" placeholder="Your name">
                 <input type="email" name="email" placeholder="Your email">
                 <textarea name="message" cols="30" rows="8" placeholder="Your message"></textarea>
                 <div>
-                    <div>
-                        <input type="checkbox">
+                    <div (click)="acceptPrivacyPolicy()" id="checkboxContainer" class="checkboxContainer">
+                        <div class="checkboxTest">
+                            <input id="checkboxPrivacy" type="checkbox">
+                        </div>
                     </div>
-                    <div>
+<!--                     <div class="checkboxContainer">
+                        <input class="checkboxPrivacy" type="checkbox">
+                        <span class="checkmark"></span>
+                    </div>
+ -->                    <div>
                         I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.
                     </div>
                 </div>
