@@ -14,7 +14,7 @@ body {
     cursor: pointer;
 }
 
-.button {
+.button, .buttonBright {
     min-width: 137px;
     height: 58px;
     border-radius: 10px;
@@ -25,8 +25,13 @@ body {
     font-size: 23px;
     background-color: white;
 
-    &:hover {
+    &.button:hover {
         background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
         color: white;
     }
+
+    &.buttonBright:hover {
+        font-weight: bold;
+    }
 }
+

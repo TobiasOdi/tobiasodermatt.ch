@@ -1,23 +1,31 @@
 <header [class.headerDark]="darkMode" id="header">
-    <img *ngIf="!darkMode" routerLink="/" src="../../assets/img/icons/logo blue.png">
-    <img *ngIf="darkMode" routerLink="/" src="../../assets/img/icons/logo.png">
-
-    <div [class.darkLinks]="darkMode">      
-        <!-- => Element erhält die Klasse darkLinks nur wenn die Variable darkMode 'true' ist -->
-        <div (click)="activeTab('aboutMe')">
-            <a [class.selectedTab]="aboutMe" routerLink="/">About me</a>
-            <div [class.blueLineMenu]="aboutMe"></div>
-        </div>
-        <div (click)="activeTab('skillSet')">
-            <a [class.selectedTab]="skillSet" routerLink="/">Skill set</a>
-            <div [class.blueLineMenu]="skillSet"></div>
-        </div>
-        <div (click)="activeTab('portfolio')">
-            <a [class.selectedTab]="portfolio" routerLink="/">Portfolio</a>   
-            <div [class.blueLineMenu]="portfolio"></div>
+    <div class="desktopMenu">
+        <img *ngIf="!darkMode" routerLink="/" src="../../assets/img/icons/logo blue.png">
+        <img *ngIf="darkMode" routerLink="/" src="../../assets/img/icons/logo.png">
+    
+        <div [class.darkLinks]="darkMode">      
+            <!-- => Element erhält die Klasse darkLinks nur wenn die Variable darkMode 'true' ist -->
+             <div (click)="activeTab('aboutMe')">
+                <a [class.selectedTab]="aboutMe" routerLink="/">About me</a>
+                <div [class.blueLineMenu]="aboutMe"></div>
+            </div>
+            <div (click)="activeTab('skillSet')">
+                <a [class.selectedTab]="skillSet" routerLink="/">Skill set</a>
+                <div [class.blueLineMenu]="skillSet"></div>
+            </div>
+            <div (click)="activeTab('portfolio')">
+                <a [class.selectedTab]="portfolio" routerLink="/">Portfolio</a>   
+                <div [class.blueLineMenu]="portfolio"></div>
+            </div>
         </div>
     </div>
-    <div>
-        <img src="../../assets/img/icons/burger menu.png" class="burgerMenu">
+
+    <div class="mobileMenu">
+        <img *ngIf="!darkMode" routerLink="/" src="../../assets/img/icons/logo blue.png">
+        <img *ngIf="darkMode" routerLink="/" src="../../assets/img/icons/logo.png">
+
+        <div>
+            <img src="../../assets/img/icons/burger menu.png" class="burgerMenu">
+        </div>
     </div>
 </header>

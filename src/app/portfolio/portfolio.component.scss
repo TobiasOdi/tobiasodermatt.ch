@@ -54,7 +54,27 @@
         align-items: center;
     }
 
-    > div:first-of-type > img {
+    > div:first-of-type > a {
+        cursor: pointer;
+        box-shadow: 4px 4px 10px 2px lightgrey;
+
+        &:hover {
+            transform: translateY(-20px) scale(1.05);
+            animation: hoverProject 225ms ease-in-out;
+        }
+
+        @keyframes hoverProject {
+            0% {
+                transform: translateY(0px) scale(1.0);
+            }
+
+            100% {
+                transform: translateY(-20px) scale(1.05);
+            }
+        }
+    }
+
+    > div:first-of-type > a > img {
         border: 1px solid black;
         width: 100%;
         height: auto;
