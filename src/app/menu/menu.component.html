@@ -5,16 +5,16 @@
     
         <div [class.darkLinks]="darkMode">      
             <!-- => Element erhält die Klasse darkLinks nur wenn die Variable darkMode 'true' ist -->
-             <div (click)="activeTab('aboutMe')">
-                <a [class.selectedTab]="aboutMe" routerLink="/">About me</a>
+            <div (click)="activeTab('aboutMe')">
+                <a [class.selectedTab]="aboutMe" href="#aboutMe">About me</a>
                 <div [class.blueLineMenu]="aboutMe"></div>
             </div>
             <div (click)="activeTab('skillSet')">
-                <a [class.selectedTab]="skillSet" routerLink="/">Skill set</a>
+                <a [class.selectedTab]="skillSet" href="#skills">Skill set</a>
                 <div [class.blueLineMenu]="skillSet"></div>
             </div>
             <div (click)="activeTab('portfolio')">
-                <a [class.selectedTab]="portfolio" routerLink="/">Portfolio</a>   
+                <a [class.selectedTab]="portfolio" href="#portfolio">Portfolio</a>   
                 <div [class.blueLineMenu]="portfolio"></div>
             </div>
         </div>

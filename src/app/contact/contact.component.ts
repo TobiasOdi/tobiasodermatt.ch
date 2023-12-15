@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -6,17 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+  @Input() privacyChecked = false;
 
   acceptPrivacyPolicy() {
-    let checkboxPrivacy =  <HTMLInputElement> document.getElementById('checkboxPrivacy');
-    let checkboxTest =  <HTMLInputElement> document.getElementById('checkboxTest');
-
-    if(checkboxPrivacy.checked){
-      checkboxTest.style.backgroundImage = "url('../../assets/img/icons/checkedCheckbox.png')";
+    if(this.privacyChecked === false) {
+      this.privacyChecked = true;
     }
-
-    if(!checkboxPrivacy.checked) {
-      checkboxTest.style.backgroundImage = "url('../../assets/img/icons/defCheckbox.png')";
+    if(this.privacyChecked === true) {
+      this.privacyChecked = false;
     }
   }
 }

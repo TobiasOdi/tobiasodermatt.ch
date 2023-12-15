@@ -13,7 +13,7 @@
                 <textarea name="message" cols="30" rows="8" placeholder="Your message"></textarea>
                 <div>
                     <div (click)="acceptPrivacyPolicy()" id="checkboxContainer" class="checkboxContainer">
-                        <div class="checkboxTest">
+                        <div class="checkboxNotChecked" [class.checkboxChecked]="privacyChecked">
                             <input id="checkboxPrivacy" type="checkbox">
                         </div>
                     </div>

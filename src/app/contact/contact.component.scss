@@ -104,7 +104,7 @@
     cursor: pointer;
 }
 
-.checkboxTest {
+.checkboxNotChecked {
     width: 24px;
     height: 24px;
     background: url(../../assets/img/icons/defCheckbox.png);
@@ -118,6 +118,10 @@
         opacity: 0;
         cursor: pointer;
     }
+}
+
+.checkboxChecked {
+    background: url(../../assets/img/icons/checkedCheckbox.png);
 }
 
 /* The container */
