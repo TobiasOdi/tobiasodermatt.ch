@@ -2,6 +2,27 @@
     <div class="desktopMenu">
         <img *ngIf="!darkMode" routerLink="/" src="../../assets/img/icons/logo blue.png">
         <img *ngIf="darkMode" routerLink="/" src="../../assets/img/icons/logo.png">
+
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round">
+                <div class="mode">
+                    <img src="../../assets/img/icons/sun.svg">
+                    <img src="../../assets/img/icons/moon.svg">
+                </div>
+
+            </span>
+        </label>
+
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round">
+                <div class="language">
+                    <div>DE</div>
+                    <div>EN</div>
+                </div>
+            </span>
+        </label>
     
         <div [class.darkLinks]="darkMode">      
             <!-- => Element erhält die Klasse darkLinks nur wenn die Variable darkMode 'true' ist -->
