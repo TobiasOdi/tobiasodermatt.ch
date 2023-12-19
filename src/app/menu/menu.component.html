@@ -4,7 +4,7 @@
         <img *ngIf="darkMode" routerLink="/" src="../../assets/img/icons/logo.png">
 
         <label class="switch">
-            <input type="checkbox" id="languageMode" (click)="setLangValue()" *ngIf="languageChange?translate.use('en'):false">;>
+            <input type="checkbox">
             <span class="slider round">
                 <div class="mode">
                     <img src="../../assets/img/icons/sun.svg">
@@ -14,8 +14,12 @@
             </span>
         </label>
 
+<!--    (click)="setLangValue()"
+        *ngIf="languageChange?translate.use('en'):false">; 
+        (change)="translate.use('en')"
+ -->
         <label class="switch">
-            <input type="checkbox" id="languageInput">
+            <input type="checkbox" id="languageMode" (change)="translate.use('en');translate.use('de')">
             <span class="slider round">
                 <div class="language">
                     <div>DE</div>
@@ -27,11 +31,11 @@
         <div [class.darkLinks]="darkMode">      
             <!-- => Element erhält die Klasse darkLinks nur wenn die Variable darkMode 'true' ist -->
             <div (click)="activeTab('aboutMe')">
-                <a [class.selectedTab]="aboutMe" href="#aboutMe">Über mich</a>
+                <a [class.selectedTab]="aboutMe" href="#aboutMe" translate>Über mich</a>
                 <div [class.blueLineMenu]="aboutMe"></div>
             </div>
             <div (click)="activeTab('skillSet')">
-                <a [class.selectedTab]="skillSet" href="#skills">Fähigkeiten</a>
+                <a [class.selectedTab]="skillSet" href="#skills" translate>Fähigkeiten</a>
                 <div [class.blueLineMenu]="skillSet"></div>
             </div>
             <div (click)="activeTab('portfolio')">
