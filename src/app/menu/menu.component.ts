@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-menu',
@@ -7,10 +9,34 @@ import { Component, Input } from '@angular/core';
 })
 export class MenuComponent {
   @Input() darkMode = false;
-
+  @Input() languageChange = false;
   @Input() aboutMe = true;
   @Input() skillSet = false;
-  @Input() portfolio = false
+  @Input() portfolio = false;
+
+    // wird von private auf public gesetzt, damit man auch von HTML darauf zugrieffen kann
+    constructor(public translate: TranslateService) { 
+      // this language will be used as a fallback when a translation isn't found in the current language
+      translate.setDefaultLang('en');
+  
+      // the lang to use, if the lang isn't available, it will use the current loader to get them
+      translate.use('en'); 
+  }
+
+  setLangValue() {
+    let languageMode = <HTMLInputElement> document.getElementById('languageMode');
+  
+    if(languageMode.checked) {
+      this.languageChange = true;
+    }
+    if(!languageMode.checked) {
+      this.languageChange = false;
+    }
+  }
+
+
+
+
 
   activeTab(acitveTab:any) {
     this.aboutMe = false;
@@ -27,4 +53,6 @@ export class MenuComponent {
       this.portfolio = true;
     }
   }
+
+
 }

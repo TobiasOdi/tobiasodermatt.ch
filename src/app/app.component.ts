@@ -16,5 +16,18 @@ export class AppComponent {
 
     // the lang to use, if the lang isn't available, it will use the current loader to get them
     translate.use('en');
+
+    
+  changeLanguage() {
+    document.getElementById('')
+
+    if(languageMode.checked) {
+      translate.use('en');
+      if(languageMode.checked) {
+        translate.use('de');
+  }
+
+
+
   } 
 }

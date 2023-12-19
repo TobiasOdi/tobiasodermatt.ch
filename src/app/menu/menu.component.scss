@@ -177,11 +177,11 @@ header {
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #5988FF;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #5988FF;
 }
 
 input:checked + .slider:before {
@@ -198,6 +198,8 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 34px;
 }
+/* ================================= */
+
 
 /* ==================== RESPONSIVENESS ================== */
 @media (max-width: 480px) {
