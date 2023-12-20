@@ -9,7 +9,7 @@ import {TranslateService} from '@ngx-translate/core';
 
 export class MenuComponent {
   @Input() darkMode = false;
-  @Input() languageChange = false;
+  languageChange = false;
   @Input() aboutMe = true;
   @Input() skillSet = false;
   @Input() portfolio = false;
@@ -24,16 +24,14 @@ export class MenuComponent {
   }
 
   setLangValue() {
-    let languageMode = <HTMLInputElement>document.getElementById('languageMode');
-
-    if(languageMode.checked) {
-      this.languageChange = true;
-    }
-    else {
+    if(this.languageChange == false) {
+      this.translate.use('en');
+      this.languageChange = true; 
+    } else {
+      this.translate.use('de');
       this.languageChange = false;
     }      
   }
-  
 
   activeTab(acitveTab:any) {
     this.aboutMe = false;

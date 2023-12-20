@@ -3,30 +3,27 @@
         <img *ngIf="!darkMode" routerLink="/" src="../../assets/img/icons/logo blue.png">
         <img *ngIf="darkMode" routerLink="/" src="../../assets/img/icons/logo.png">
 
-        <label class="switch">
-            <input type="checkbox">
-            <span class="slider round">
-                <div class="mode">
-                    <img src="../../assets/img/icons/sun.svg">
-                    <img src="../../assets/img/icons/moon.svg">
-                </div>
-
-            </span>
-        </label>
-
-<!--    (click)="setLangValue()"
-        *ngIf="languageChange?translate.use('en'):false">; 
-        (change)="translate.use('en')"
- -->
-        <label class="switch">
-            <input type="checkbox" id="languageMode" (change)="translate.use('en');translate.use('de')">
-            <span class="slider round">
-                <div class="language">
-                    <div>DE</div>
-                    <div>EN</div>
-                </div>
-            </span>
-        </label>
+        <div class="slides">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round">
+                    <div class="mode">
+                        <img src="../../assets/img/icons/sun.svg">
+                        <img src="../../assets/img/icons/moon.svg">
+                    </div>
+    
+                </span>
+            </label>
+            <label class="switch">
+                <input type="checkbox" id="languageMode">
+                <span class="slider round">
+                    <div class="language" (click)="setLangValue()">
+                        <div>DE</div>
+                        <div>EN</div>
+                    </div>
+                </span>
+            </label>
+        </div>
     
         <div [class.darkLinks]="darkMode">      
             <!-- => Element erhält die Klasse darkLinks nur wenn die Variable darkMode 'true' ist -->
