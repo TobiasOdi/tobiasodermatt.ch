@@ -1,31 +1,37 @@
 <header [class.headerDark]="darkMode" id="header">
     <div class="desktopMenu">
-        <img *ngIf="!darkMode" routerLink="/" src="../../assets/img/icons/logo blue.png">
-        <img *ngIf="darkMode" routerLink="/" src="../../assets/img/icons/logo.png">
+        <div class="desktopMenuLeftSide">
+            <img routerLink="/" src="../../assets/img/icons/logo blue.png">
 
-        <div class="slides">
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider round">
-                    <div class="mode">
-                        <img src="../../assets/img/icons/sun.svg">
-                        <img src="../../assets/img/icons/moon.svg">
-                    </div>
-    
-                </span>
-            </label>
-            <label class="switch">
-                <input type="checkbox" id="languageMode">
-                <span class="slider round">
-                    <div class="language" (click)="setLangValue()">
-                        <div>DE</div>
-                        <div>EN</div>
-                    </div>
-                </span>
-            </label>
+            <!-- =========== DARK MODE =========== -->
+    <!--         <img routerLink="/" src="../../assets/img/icons/logo.png"> -->
+            <!-- *ngIf="!darkMode"
+                *ngIf="darkMode" -->
+
+            <div class="slides">
+ <!--                <div class="switch">
+                    <input type="checkbox">
+                    <span class="slider round">
+                        <div class="mode">
+                            <img src="../../assets/img/icons/sun.svg">
+                            <img src="../../assets/img/icons/moon.svg">
+                        </div>
+        
+                    </span>
+                </div> -->
+                <div class="switch">
+                    <input type="checkbox" id="languageMode">
+                    <span class="slider round">
+                        <div class="language" (click)="setLangValue()">
+                            <div>DE</div>
+                            <div>EN</div>
+                        </div>
+                    </span>
+                </div>
+            </div>
         </div>
     
-        <div [class.darkLinks]="darkMode">      
+        <div [class.darkLinks]="darkMode" class="desktopMenuRightSide">      
             <!-- => Element erhält die Klasse darkLinks nur wenn die Variable darkMode 'true' ist -->
             <div (click)="activeTab('aboutMe')">
                 <a [class.selectedTab]="aboutMe" href="#aboutMe" translate>Über mich</a>
@@ -39,19 +45,37 @@
                 <a [class.selectedTab]="portfolio" href="#portfolio">Portfolio</a>   
                 <div [class.blueLineMenu]="portfolio"></div>
             </div>
+            <div (click)="activeTab('contact')">
+                <a [class.selectedTab]="contact" href="#contact">Contact</a>   
+                <div [class.blueLineMenu]="contact"></div>
+            </div>
         </div>
     </div>
 
-    <div class="mobileMenu">
-        <img *ngIf="!darkMode" routerLink="/" src="../../assets/img/icons/logo blue.png">
-        <img *ngIf="darkMode" routerLink="/" src="../../assets/img/icons/logo.png">
+    <div class="mobileMenu" (click)="openMobileMenu()" >
+        <img routerLink="/" src="../../assets/img/icons/logo blue.png">
 
         <div>
             <img src="../../assets/img/icons/burger menu.png" class="burgerMenu">
         </div>
     </div>
 
-    <div class="mobileMenuOpen">
-
+    <div class="mobileMenuOpen" *ngIf="mobileMenuOpenCheck">
+        <div (click)="activeTab('aboutMe')">
+            <a [class.selectedTab]="aboutMe" href="#aboutMe" translate>Über mich</a>
+            <div [class.blueLineMenu]="aboutMe"></div>
+        </div>
+        <div (click)="activeTab('skillSet')">
+            <a [class.selectedTab]="skillSet" href="#skills" translate>Fähigkeiten</a>
+            <div [class.blueLineMenu]="skillSet"></div>
+        </div>
+        <div (click)="activeTab('portfolio')">
+            <a [class.selectedTab]="portfolio" href="#portfolio">Portfolio</a>   
+            <div [class.blueLineMenu]="portfolio"></div>
+        </div>
+        <div (click)="activeTab('contact')">
+            <a [class.selectedTab]="contact" href="#contact">Contact</a>   
+            <div [class.blueLineMenu]="contact"></div>
+        </div>
     </div>
 </header>

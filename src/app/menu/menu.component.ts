@@ -13,6 +13,8 @@ export class MenuComponent {
   @Input() aboutMe = true;
   @Input() skillSet = false;
   @Input() portfolio = false;
+  @Input() contact = false;
+  @Input() mobileMenuOpenCheck = false;
 
   // wird von private auf public gesetzt, damit man auch von HTML darauf zugrieffen kann
   constructor(public translate: TranslateService) { 
@@ -36,7 +38,8 @@ export class MenuComponent {
   activeTab(acitveTab:any) {
     this.aboutMe = false;
     this.skillSet = false;
-    this.portfolio = false
+    this.portfolio = false;
+    this.contact = false;
 
     if(acitveTab == 'aboutMe') {
       this.aboutMe = true;
@@ -47,7 +50,18 @@ export class MenuComponent {
     if(acitveTab == 'portfolio') {
       this.portfolio = true;
     }
+    if(acitveTab == 'contact') {
+      this.contact = true;
+    }
+
+    this.mobileMenuOpenCheck = false;
   }
 
-
+  openMobileMenu() {
+    if(this.mobileMenuOpenCheck == false) {
+      this.mobileMenuOpenCheck = true; 
+    } else {
+      this.mobileMenuOpenCheck = false;
+    }   
+  }
 }
