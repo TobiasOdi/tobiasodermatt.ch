@@ -3,8 +3,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .aboutMe {
@@ -15,10 +15,11 @@
     width: 50%;
 
     div:first-of-type {
-        font-size: 121px;
+        font-size: 100px;
         font-family: 'Baloo 2', sans-serif;
         font-weight: bold;
         color: #5988FF;
+        line-height: 0.8;
     }
 
     div:last-of-type {
@@ -33,9 +34,37 @@
     width: 50%;
 
     img {
-        height: 500px;
-        width: auto;
+        height: auto;
+        width: 100%;
     }
+}
+
+/* ================= RESPONSIVENESS ================= */
+@media (max-width: 1080px) {
+    .aboutMe {
+        div:first-of-type {
+            font-size: 80px;
+    }
+    }
+}
+
+@media (max-width: 870px) {
+    .aboutMeProfilePicture {
+        display: none;
+    }
+
+    .aboutMeContainer {
+        > div {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+    
 }
 
 

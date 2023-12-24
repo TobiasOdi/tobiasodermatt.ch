@@ -236,9 +236,9 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-    -webkit-transform: translateX(36px)!important;
-    -ms-transform: translateX(36px)!important;
-    transform: translateX(36px)!important;
+    -webkit-transform: translateX(36px);
+    -ms-transform: translateX(36px);
+    transform: translateX(36px);
 }
 
 /* Rounded sliders */
@@ -257,6 +257,15 @@ input:checked + .slider:before {
     header {
         padding-left: 2rem;
         padding-right: 2rem;
+
+        > .desktopMenu {
+            > .desktopMenuRightSide{
+    
+                a {
+                    font-size: 18px;
+                }
+            }
+        }
     }
 }
 
