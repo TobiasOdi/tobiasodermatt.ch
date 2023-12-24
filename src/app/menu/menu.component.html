@@ -19,15 +19,15 @@
         
                     </span>
                 </div> -->
-                <div class="switch">
-                    <input type="checkbox" id="languageMode">
+                <label class="switch">
+                    <input type="checkbox">
                     <span class="slider round">
                         <div class="language" (click)="setLangValue()">
                             <div>DE</div>
                             <div>EN</div>
                         </div>
                     </span>
-                </div>
+                </label>
             </div>
         </div>
     
@@ -46,13 +46,13 @@
                 <div [class.blueLineMenu]="portfolio"></div>
             </div>
             <div (click)="activeTab('contact')">
-                <a [class.selectedTab]="contact" href="#contact">Contact</a>   
+                <a [class.selectedTab]="contact" href="#contact" translate>Kontakt</a>   
                 <div [class.blueLineMenu]="contact"></div>
             </div>
         </div>
     </div>
 
-    <div class="mobileMenu" (click)="openMobileMenu()" >
+    <div class="mobileMenu" (click)="openMobileMenu()">
         <img routerLink="/" src="../../assets/img/icons/logo blue.png">
 
         <div>
@@ -61,6 +61,16 @@
     </div>
 
     <div class="mobileMenuOpen" *ngIf="mobileMenuOpenCheck">
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round">
+                <div class="language" (click)="setLangValue()">
+                    <div>DE</div>
+                    <div>EN</div>
+                </div>
+            </span>
+        </label>
+
         <div (click)="activeTab('aboutMe')">
             <a [class.selectedTab]="aboutMe" href="#aboutMe" translate>Über mich</a>
             <div [class.blueLineMenu]="aboutMe"></div>
@@ -74,7 +84,7 @@
             <div [class.blueLineMenu]="portfolio"></div>
         </div>
         <div (click)="activeTab('contact')">
-            <a [class.selectedTab]="contact" href="#contact">Contact</a>   
+            <a [class.selectedTab]="contact" href="#contact" translate>Kontakt</a>   
             <div [class.blueLineMenu]="contact"></div>
         </div>
     </div>
