@@ -9,12 +9,16 @@ import {TranslateService} from '@ngx-translate/core';
 
 export class MenuComponent {
   @Input() darkMode = false;
-  languageChange = false;
+  languageChange:boolean = false;
   @Input() aboutMe = true;
   @Input() skillSet = false;
   @Input() portfolio = false;
   @Input() contact = false;
   @Input() mobileMenuOpenCheck = false;
+
+  checkboxOne = document.getElementById('checkboxOne') as HTMLInputElement | null;
+  checkboxTwo = document.getElementById('checkboxTwo') as HTMLInputElement | null;
+
 
   // wird von private auf public gesetzt, damit man auch von HTML darauf zugrieffen kann
   constructor(public translate: TranslateService) { 
@@ -26,12 +30,24 @@ export class MenuComponent {
   }
 
   setLangValue() {
-    if(this.languageChange == false) {
+    if(!this.languageChange) {
       this.translate.use('en');
-      this.languageChange = true; 
-    } else {
+      this.languageChange = true;
+
+      if (this.checkboxOne != null && this.checkboxTwo != null) {
+        this.checkboxOne.checked = true;
+        this.checkboxTwo.checked = true;
+      }
+
+    } else if(this.languageChange) {
       this.translate.use('de');
       this.languageChange = false;
+
+      if (this.checkboxOne != null &&this.checkboxTwo != null) {
+        this.checkboxOne.checked = false;
+        this.checkboxTwo.checked = false;
+
+      }
     }      
   }
 
@@ -60,7 +76,7 @@ export class MenuComponent {
   openMobileMenu() {
     if(this.mobileMenuOpenCheck == false) {
       this.mobileMenuOpenCheck = true; 
-    } else {
+    } else if(this.mobileMenuOpenCheck == true) {
       this.mobileMenuOpenCheck = false;
     }   
   }

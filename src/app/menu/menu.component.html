@@ -9,7 +9,7 @@
                 *ngIf="darkMode" -->
 
             <div class="slides">
- <!--                <div class="switch">
+ <!--           <div class="switch">
                     <input type="checkbox">
                     <span class="slider round">
                         <div class="mode">
@@ -20,9 +20,9 @@
                     </span>
                 </div> -->
                 <label class="switch">
-                    <input type="checkbox">
+                    <input (click)="setLangValue()" type="checkbox" id="checkboxOne" [checked]="languageChange">
                     <span class="slider round">
-                        <div class="language" (click)="setLangValue()">
+                        <div class="language" >
                             <div>DE</div>
                             <div>EN</div>
                         </div>
@@ -62,9 +62,9 @@
 
     <div class="mobileMenuOpen" *ngIf="mobileMenuOpenCheck">
         <label class="switch">
-            <input type="checkbox">
+            <input (click)="setLangValue()" type="checkbox" id="checkboxTwo" [checked]="languageChange">
             <span class="slider round">
-                <div class="language" (click)="setLangValue()">
+                <div class="language">
                     <div>DE</div>
                     <div>EN</div>
                 </div>
