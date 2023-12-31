@@ -39,6 +39,7 @@ export class ContactComponent {
     let formData = new FormData(); 
     formData.append('name', nameField.value);
     formData.append('message', messageField.value);
+
     // Sendeanimation
 
     await fetch('https://tobias-odermatt.developerakademie.net/angular-projects/tobias_odermatt/send_mail.php',
