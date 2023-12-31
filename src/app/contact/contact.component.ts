@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -7,6 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 export class ContactComponent {
   @Input() privacyChecked = false;
+  @ViewChild('myForm') myForm!: ElementRef;
+  @ViewChild('nameField') nameField!: ElementRef;
+  @ViewChild('emailField') emailField!: ElementRef;
+  @ViewChild('messageField') messageField!: ElementRef;
+  @ViewChild('submitButton') submitButton!: ElementRef;
 
   acceptPrivacyPolicy() {
     if(this.privacyChecked === false) {
@@ -15,5 +20,35 @@ export class ContactComponent {
     if(this.privacyChecked === true) {
       this.privacyChecked = false;
     }
+  }
+
+  async sendMail() {
+    let nameField = this.nameField.nativeElement;
+    let emailField = this.emailField.nativeElement;
+    let messageField = this.nameField.nativeElement;
+    let submitButton = this.nameField.nativeElement;
+    nameField.disabled = true;
+    emailField.disabled = true;
+    messageField.disabled = true;
+    submitButton.disabled = true;
+
+
+    let formData = new FormData(); 
+    formData.append('name', nameField.value);
+    formData.append('message', messageField.value);
+    // Sendeanimation
+
+    await fetch('https://tobias-odermatt.developerakademie.net/angular-projects/tobias_odermatt/send_mail.php',
+      {
+        method: 'POST',
+        body: formData
+      }
+    )
+
+    // Text anzeigen Nachricht gesendet
+    nameField.disabled = false;
+    emailField.disabled = false;
+    messageField.disabled = false;
+    submitButton.disabled = false;
   }
 }
