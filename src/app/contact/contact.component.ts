@@ -11,8 +11,9 @@ export class ContactComponent {
   @ViewChild('nameField') nameField!: ElementRef;
   @ViewChild('emailField') emailField!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
+  @ViewChild('privacyField') privacyField!: ElementRef;
   @ViewChild('submitButton') submitButton!: ElementRef;
-
+  
   acceptPrivacyPolicy() {
     if(this.privacyChecked === false) {
       this.privacyChecked = true;
@@ -26,10 +27,12 @@ export class ContactComponent {
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let messageField = this.nameField.nativeElement;
+    let privacyField = this.nameField.nativeElement;
     let submitButton = this.nameField.nativeElement;
     nameField.disabled = true;
     emailField.disabled = true;
     messageField.disabled = true;
+    privacyField.disabled = true;
     submitButton.disabled = true;
 
 
@@ -49,6 +52,7 @@ export class ContactComponent {
     nameField.disabled = false;
     emailField.disabled = false;
     messageField.disabled = false;
+    privacyField.disabled = false;
     submitButton.disabled = false;
   }
 }
