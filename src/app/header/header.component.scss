@@ -6,7 +6,9 @@
     align-items: center;
     padding-left: 2rem;
     padding-right: 2rem;
-    background-color: #EAF0FF;
+    //background-color: #EAF0FF;
+    background: linear-gradient(#FFF 30%, #EAF0FF) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
 
     > div {
         width: 50%;
@@ -81,7 +83,7 @@
     flex-direction: column;
     justify-self: flex-end;
     align-items: flex-end;
-    gap: 15px;
+    gap: 20px;
 
     > a > div {
         height: 40px;

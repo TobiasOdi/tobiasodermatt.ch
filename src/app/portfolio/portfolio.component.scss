@@ -12,6 +12,7 @@
     font-size: 96px;
     font-family: 'Baloo 2', sans-serif;
     font-weight: bold;
+    line-height: 0.8;
     color: #5988FF;
 }
 
@@ -36,10 +37,10 @@
 
     > div {
         width: 50%;
+        height: 400px;
     }
 
     > div:last-of-type {
-        height: 400px;
         padding-left: 4rem;
         display: flex;
         flex-direction: column;
@@ -55,6 +56,8 @@
     }
 
     > div:first-of-type > a {
+        width: 100%;
+        height: auto;
         cursor: pointer;
         box-shadow: 4px 4px 10px 2px lightgrey;
 
@@ -75,7 +78,6 @@
     }
 
     > div:first-of-type > a > img {
-        border: 1px solid black;
         width: 100%;
         height: auto;
     }
