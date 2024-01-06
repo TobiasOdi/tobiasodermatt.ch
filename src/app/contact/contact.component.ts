@@ -26,9 +26,9 @@ export class ContactComponent {
   async sendMail() {
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
-    let messageField = this.nameField.nativeElement;
-    let privacyField = this.nameField.nativeElement;
-    let submitButton = this.nameField.nativeElement;
+    let messageField = this.messageField.nativeElement;
+    let privacyField = this.privacyField.nativeElement;
+    let submitButton = this.submitButton.nativeElement;
     nameField.disabled = true;
     emailField.disabled = true;
     messageField.disabled = true;
@@ -42,7 +42,7 @@ export class ContactComponent {
 
     // Sendeanimation
 
-    await fetch('https://tobias-odermatt.developerakademie.net/angular-projects/tobias_odermatt/send_mail.php',
+    await fetch('https://formspree.io/f/mqkrkwra',
       {
         method: 'POST',
         body: formData
@@ -55,5 +55,11 @@ export class ContactComponent {
     messageField.disabled = false;
     privacyField.disabled = false;
     submitButton.disabled = false;
+
+    nameField.value = "";
+    emailField.value = "";
+    messageField.value = "";
+    privacyField.checked = false;
+
   }
 }

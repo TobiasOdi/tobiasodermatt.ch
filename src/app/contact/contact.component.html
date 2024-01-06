@@ -10,12 +10,12 @@
             <form #contactForm class="contactForm" (submit)="sendMail()" ngNativeValidate>
                 <input type="text" name="name" placeholder="Your name" #nameField required>
                 <input type="email" name="email" placeholder="Your email" #emailField required>
-                <input type="textarea" name="message" cols="30" rows="8" placeholder="Your message" #messageField required>
+                <textarea type="textarea" name="message" cols="30" rows="8" placeholder="Your message" #messageField required></textarea>
                 <div>
                     <div id="checkboxContainer" class="checkboxContainer"> <!-- [class.checkboxChecked]="privacyChecked" -->
                         <div> <!-- class="checkboxNotChecked" -->
                             <!-- (click)="acceptPrivacyPolicy()"-->
-                            <input id="checkboxPrivacy" type="checkbox" #privacyField required>
+                            <input id="checkboxPrivacy" type="checkbox" name="privacy" #privacyField required>
                         </div>
                     </div>
 <!--                     <div class="checkboxContainer">
@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 
-                <button class="button" #submitButton>Send message</button>
+                <button type="submit" class="button" #submitButton>Send message</button>
             </form>
         </div>
     </div>
