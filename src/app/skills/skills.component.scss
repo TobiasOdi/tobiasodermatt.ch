@@ -74,4 +74,40 @@
         padding-left: 1rem;
         padding-right: 1rem;
     }
+
+    .firstRow, 
+    .secondRow {
+        > img {
+            width: 50px;
+            height: auto;
+        }
+    }
+
+    .skillsTitle {
+        font-size: 80px;
+    }
+    .skillsDescription {
+        div {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .firstRow, 
+    .secondRow {
+        > img {
+            width: 40px;
+            height: auto;
+        }
+    }
+
+    .skillsTitle {
+        font-size: 60px;
+    }
+    .skillsDescription {
+        div {
+            font-size: 16px;
+        }
+    }
 }
