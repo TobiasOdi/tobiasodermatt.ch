@@ -16,6 +16,7 @@ export class MenuComponent {
   @Input() contact = false;
   @Input() mobileMenuOpenCheck = false;
 
+  menu = document.querySelector('.menuIcon') as HTMLInputElement | null;
   checkboxOne = document.getElementById('checkboxOne') as HTMLInputElement | null;
   checkboxTwo = document.getElementById('checkboxTwo') as HTMLInputElement | null;
 
@@ -74,6 +75,8 @@ export class MenuComponent {
   }
 
   openMobileMenu() {
+    this.menu?.classList.toggle("move");  
+
     if(this.mobileMenuOpenCheck == false) {
       this.mobileMenuOpenCheck = true; 
     } else if(this.mobileMenuOpenCheck == true) {
