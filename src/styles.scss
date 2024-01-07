@@ -1,14 +1,11 @@
 
-:root {
-    --portfolio-bright-blue: #0043F0;
-    --portfolio-main-blue: #5988FF;
-    --portfolio-very-light-blue: #EAF0FF;
+$portfolio-bright-blue: #0043F0;
+$portfolio-main-blue: #5988FF;
+$portfolio-very-light-blue: #EAF0FF;
 
-    --dark-blue: #090B1B;
-    --blue: #191B3C;
-    --light-blue: #475FBC;
-}
-
+$dark-blue: #090B1B;
+$blue: #191B3C;
+$light-blue: #475FBC;
 
 * {
     box-sizing: border-box;

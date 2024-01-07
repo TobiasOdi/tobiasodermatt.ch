@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 
 @Component({
@@ -16,10 +16,8 @@ export class MenuComponent {
   @Input() contact = false;
   @Input() mobileMenuOpenCheck = false;
 
-  menu = document.querySelector('.menuIcon') as HTMLInputElement | null;
   checkboxOne = document.getElementById('checkboxOne') as HTMLInputElement | null;
   checkboxTwo = document.getElementById('checkboxTwo') as HTMLInputElement | null;
-
 
   // wird von private auf public gesetzt, damit man auch von HTML darauf zugrieffen kann
   constructor(public translate: TranslateService) { 
@@ -75,8 +73,6 @@ export class MenuComponent {
   }
 
   openMobileMenu() {
-    this.menu?.classList.toggle("move");  
-
     if(this.mobileMenuOpenCheck == false) {
       this.mobileMenuOpenCheck = true; 
     } else if(this.mobileMenuOpenCheck == true) {

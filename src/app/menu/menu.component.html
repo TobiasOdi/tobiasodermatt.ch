@@ -52,10 +52,10 @@
         </div>
     </div>
 
-    <div class="mobileMenu" (click)="openMobileMenu()">
+    <div class="mobileMenu">
         <img routerLink="/" src="../../assets/img/icons/logo blue.png">
 
-        <div class="menuIcon">
+        <div id="menuIcon" class="menuIcon" (click)="openMobileMenu()" [class.move]="mobileMenuOpenCheck">
 <!--             <img src="../../assets/img/icons/burger menu.png" class="burgerMenu">
  -->
             <div class="line1"></div>

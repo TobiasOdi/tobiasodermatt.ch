@@ -1,3 +1,5 @@
+@import '../../styles.scss';
+
 .headerContainer {
     height: calc(100vh - 80px);
     width: 100%;
@@ -54,7 +56,7 @@
 .greeting > div:first-of-type {
     font-size: 64px;
     text-align: left;
-    color: #5988FF;
+    color: $portfolio-main-blue;
     word-wrap: break-word;
 }
 
@@ -96,8 +98,9 @@
 }
 
 .defGitBtn:hover {
-    background: url(../../assets/img/icons/hovGitBtn.png) no-repeat;
-}
+    transform: translate(-30px, 0);
+/*     background: url(../../assets/img/icons/hovGitBtn.png) no-repeat;
+ */}
 
 .defLinkBtn {
     background: url(../../assets/img/icons/defLinkBtn.png) no-repeat;
