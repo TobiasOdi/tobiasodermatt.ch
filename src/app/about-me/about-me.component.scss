@@ -1,5 +1,3 @@
-@import '../../styles.scss';
-
 .aboutMeContainer {
     width: 100%;
     display: flex;
@@ -70,4 +68,32 @@
     
 }
 
+@media (max-width: 480px) {
+    .aboutMeContainer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .aboutMe {
+        div:first-of-type {
+            font-size: 65px;
+        }
+
+        div:last-of-type {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .aboutMe {
+        div:first-of-type {
+            font-size: 50px;
+        }
+
+        div:last-of-type {
+            font-size: 16px;
+        }
+    }
+}
 

@@ -1,5 +1,3 @@
-@import '../../styles.scss';
-
 header {
     height: 80px;
     z-index: 1;
@@ -22,7 +20,6 @@ header {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 0.5rem;
         }
 
         img {
@@ -35,9 +32,13 @@ header {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        gap: 0.5rem;
+        gap: 15px;
 
-        > div:first-of-type {
+        > div {
+            width: fit-content;
+        }
+
+/*         > div:first-of-type {
             min-width: 125px;
         }
 
@@ -52,7 +53,7 @@ header {
         > div:last-of-type {
             min-width: 100px;
         }
-
+ */
         a {
             text-align: right;
             font-weight: 400;
@@ -292,6 +293,12 @@ input:checked + .slider:before {
     }
 }
 
+@media (min-width: 720px) {
+    .mobileMenuOpen {
+        display: none;
+    }
+}
+
 @media (max-width: 720px) {
     header > .mobileMenu {
         display: flex;
@@ -302,13 +309,6 @@ input:checked + .slider:before {
     }
 }
 
-@media (max-width: 360px) {
-
-}
-
-@media (max-width: 240px) {
-
-}
 
 
 

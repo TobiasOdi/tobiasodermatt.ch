@@ -1,5 +1,3 @@
-@import '../../styles.scss';
-
 .skillsContainer {
     width: 100%;
     display: flex;
@@ -46,4 +44,34 @@
     align-items: center;
     padding-left: 5rem;
     padding-right: 5rem;
+}
+
+/* ================== RESPONSIVENESS ================== */
+
+@media (max-width: 1000px) {
+    .firstRow, 
+    .secondRow {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .firstRow, 
+    .secondRow {
+        padding-left: 0;
+        padding-right: 0;
+
+        > img {
+            width: 70px;
+            height: auto;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .skillsContainer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }

@@ -8,8 +8,7 @@
     align-items: center;
     padding-left: 2rem;
     padding-right: 2rem;
-    //background-color: #EAF0FF;
-    background: linear-gradient(#FFF 30%, #EAF0FF) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    background: linear-gradient(#FFF 30%, #EAF0FF);
 
 
     > div {
@@ -18,7 +17,6 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
-
     };
 
     > .profilePictureContainer {
@@ -30,6 +28,7 @@
 
 .profilePicture {
     width: auto;
+    max-width: 100%;
     height: auto;
     max-height: 612px;
 }
@@ -42,7 +41,6 @@
     justify-content: space-between;
     padding-top: 2rem;
     padding-bottom: 2rem;
-
 }
 
 .greeting {
@@ -76,9 +74,6 @@
     }
 }
 
-/* .greeting > div:last-of-type > div {
-} */
-
 .icons {
     width: 100%;
     display: flex;
@@ -98,9 +93,8 @@
 }
 
 .defGitBtn:hover {
-    transform: translate(-30px, 0);
-/*     background: url(../../assets/img/icons/hovGitBtn.png) no-repeat;
- */}
+    background: url(../../assets/img/icons/hovGitBtn.png) no-repeat;
+}
 
 .defLinkBtn {
     background: url(../../assets/img/icons/defLinkBtn.png) no-repeat;
@@ -116,6 +110,7 @@
 
 .defMailBtn:hover {
     background: url(../../assets/img/icons/hovMailBtn.png) no-repeat;
+    
 }
 
 /* ================= RESPONSIVENESS ================= */
@@ -133,22 +128,70 @@
 
 @media (max-width: 870px) {
     .headerContainer {
+        height: auto;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: flex-start;
+
         > div {
             width: 100%;    
         }
     }
 
-    .headerContainer {
-        height: auto;
-        flex-direction: column-reverse;
-        align-items: center;
-        justify-content: flex-start;
-    }
-
     .icons {
         display: none;
     }
+
     .greeting {
         width: 100%;
     }
+
+    .greeting > div:first-of-type {
+        font-size: 40px;
+    }
+
+    .greeting > div:last-of-type  {
+        > div {
+            font-size: 65px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .headerContainer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .greeting > div:first-of-type {
+        font-size: 35px;
+    }
+    .greeting > div:last-of-type  {
+        > div {
+            font-size: 55px;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .greeting > div:first-of-type {
+        font-size: 30px;
+    }
+
+    .greeting > div:last-of-type  {
+        > div {
+            font-size: 45px;
+        }
+    }
+}
+
+@media (max-width: 300px) {
+/*     .greeting > div:first-of-type {
+        font-size: 25px;
+    }
+
+    .greeting > div:last-of-type  {
+        > div {
+            font-size: 40px;
+        }
+    } */
 }
