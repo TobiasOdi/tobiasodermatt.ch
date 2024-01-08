@@ -35,7 +35,7 @@
     }
 }
 
-.contactSubContainer form {
+.contactForm {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -55,10 +55,14 @@
     border-radius: 10px;
 }
 
-.inputSubContainer,
+.inputSubContainer {
+    height: auto;
+    position: relative;
+}
+
 .inputSubContainer > input,
-.inputSubContainer > textarea,
-.validationImages {
+.validationImages,
+.labelLine {
     height: 50px;
     line-height: 50px;
 }
@@ -78,10 +82,6 @@
     display: none;
 }
 
-.inputSubContainer {
-    position: relative;
-}
-
 .inputSubContainer > input,
 .inputSubContainer > textarea {
     position: absolute;
@@ -93,9 +93,20 @@
     z-index: 10;
 }
 
+.inputContainer > .inputSubContainer:nth-of-type(3) {
+    height: auto;
+}
+
 .inputSubContainer > textarea {
     height: 150px;
     min-height: 55px;
+    max-height: 150px;
+    line-height: normal;
+    padding-top: 1rem;
+
+    &::-webkit-resizer {
+        display: none;
+}
 }
 
 .inputSubContainer > input,
@@ -106,9 +117,16 @@
     font-size: 16px;
 }
 
+.contactForm > .inputContainer:nth-of-type(3) > .inputSubContainer{
+    height: 150px;
+}
+
+.contactForm > div:last-of-type {
+    display: flex;
+    flex-direction: row;
+}
+
 .labelLine {
-    height: 50px;
-    line-height: 50px;
     background-color: white;
     position: absolute;
     padding: 0 20px;
@@ -175,31 +193,14 @@
     z-index: 10;
 }
 
-/*     > textarea ::-webkit-resizer {
-        background-image: url(../../assets/img/icons/Frame.png);
-        object-fit: cover;
-} */
-
-
-
-/* .contactSubContainer form > input,
-.contactSubContainer form > textarea {
-    color: white;
-    font-size: 16px;
-    line-height: 19px;
-    border: 0 0 2px 0;
-    padding: 15px 25px 15px 25px;
-    gap: 10;
-    background-color: black;
-    outline: none;
-    height: 50px;
-    width: 500px;
-} */
-
-.contactSubContainer form > div:last-of-type {
+.upButton {
     width: 100%;
     display: flex;
     flex-direction: row;
+
+    > a {
+        width: 39px;
+    }
 }
 
 .defUpBtn {
@@ -213,32 +214,33 @@
 }
 
 /* ========================== CHECKBOX ========================== */
-
 .checkboxContainer {
+    position: relative;
+    height: 18px;
+    width: 18px;
+    padding: 3px;
     display: flex;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
     cursor: pointer;
+    border: 2px solid #5988FF;
+    border-radius: 3px;
+    background: transparent;
+    margin-right: 5px;
 }
 
-.checkboxNotChecked {
-    width: 24px;
-    height: 24px;
-    background: url(../../assets/img/icons/defCheckbox.png);
+.checkboxTick {
+    display: none;
+    height: 12px;
+    width: 12px;
+}
+
+.checkboxContainer:hover .checkboxHoverContainer {
+    position: absolute;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
-
-    &:hover {
-        background-color: #D4E0FF;
-    }
-
-    > input {
-        opacity: 0;
-        cursor: pointer;
-    }
-}
-
-.checkboxChecked {
-    background: url(../../assets/img/icons/checkedCheckbox.png);
+    background-color: rgba(121, 126, 243, 0.6);
 }
 
 /* ================== RESPONSIVENESS ============== */
