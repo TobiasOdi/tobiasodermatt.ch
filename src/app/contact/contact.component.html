@@ -8,21 +8,55 @@
         </div>
         <div>
             <form #contactForm class="contactForm" (submit)="sendMail()" ngNativeValidate>
-                <input type="text" name="name" placeholder="Your name" #nameField required>
-                <input type="email" name="email" placeholder="Your email" #emailField required>
-                <textarea type="textarea" name="message" cols="30" rows="8" placeholder="Your message" #messageField required></textarea>
+                <div class="inputContainer">
+                    <div class="inputSubContainer">
+                        <input type="text" name="name" #nameField required>
+                        <div class="labelLine">Your name</div>
+                        <div class="validationImages">
+                            <img class="validImg" src="../../assets/img/icons/valid.png">
+                            <img class="errorImg" src="../../assets/img/icons/error.png">
+                        </div>
+                    </div>
+                    <div class="inputNote">
+                        Your name is required
+                    </div>
+                </div>
+
+                <div class="inputContainer">
+                    <div class="inputSubContainer">
+                        <input type="email" name="email" #emailField required>
+                        <div class="labelLine">Your email</div>
+                        <div class="validationImages">
+                            <img class="validImg" src="../../assets/img/icons/valid.png">
+                            <img class="errorImg" src="../../assets/img/icons/error.png">
+                        </div>
+                    </div>
+                    <div class="inputNote">
+                        Your email is required
+                    </div>
+                </div>
+
+                <div class="inputContainer">
+                    <div class="inputSubContainer">
+                        <textarea type="textarea" name="message" #messageField required></textarea>
+                        <div class="labelLine">Your message</div>
+                        <div class="validationImages">
+                            <img class="validImg" src="../../assets/img/icons/valid.png">
+                            <img class="errorImg" src="../../assets/img/icons/error.png">
+                        </div>
+                    </div>
+                    <div class="inputNote">
+                        A message is required
+                    </div>
+                </div>
+                
                 <div>
-                    <div id="checkboxContainer" class="checkboxContainer"> <!-- [class.checkboxChecked]="privacyChecked" -->
-                        <div> <!-- class="checkboxNotChecked" -->
-                            <!-- (click)="acceptPrivacyPolicy()"-->
+                    <div id="checkboxContainer" class="checkboxContainer">
+                        <div>
                             <input id="checkboxPrivacy" type="checkbox" name="privacy" #privacyField required>
                         </div>
                     </div>
-<!--                     <div class="checkboxContainer">
-                        <input class="checkboxPrivacy" type="checkbox">
-                        <span class="checkmark"></span>
-                    </div>
- -->                <div>
+                    <div>
                         I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.
                     </div>
                 </div>
