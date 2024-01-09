@@ -36,7 +36,6 @@ export class ContactComponent {
     privacyField.disabled = true;
     submitButton.disabled = true;
 
-
     let formData = new FormData(); 
     formData.append('name', nameField.value);
     formData.append('message', messageField.value);
