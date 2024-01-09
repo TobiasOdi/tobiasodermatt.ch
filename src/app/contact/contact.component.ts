@@ -13,6 +13,7 @@ export class ContactComponent {
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('privacyField') privacyField!: ElementRef;
   @ViewChild('submitButton') submitButton!: ElementRef;
+
   
   acceptPrivacyPolicy() {
     if(this.privacyChecked === false) {

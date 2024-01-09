@@ -227,6 +227,7 @@
     border-radius: 3px;
     background: transparent;
     margin-right: 5px;
+    z-index: 2;
 }
 
 .checkboxTick {
@@ -241,6 +242,18 @@
     height: 22px;
     border-radius: 50%;
     background-color: rgba(121, 126, 243, 0.6);
+    z-index: 1;
+}
+/* ================================================ */
+
+.inputCheckbox {
+    cursor: pointer;
+    opacity: 0;
+    z-index: 5;
+}
+
+.showTick {
+    display: block!important;
 }
 
 /* ================== RESPONSIVENESS ============== */
