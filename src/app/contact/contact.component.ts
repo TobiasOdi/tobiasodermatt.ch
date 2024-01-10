@@ -6,6 +6,7 @@ import { Component, ElementRef, Input, ViewChild } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+  @Input() show = false;
   @Input() privacyChecked = false;
   @ViewChild('myForm') myForm!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
@@ -18,8 +19,7 @@ export class ContactComponent {
   acceptPrivacyPolicy() {
     if(this.privacyChecked === false) {
       this.privacyChecked = true;
-    }
-    if(this.privacyChecked === true) {
+    } else if(this.privacyChecked === true) {
       this.privacyChecked = false;
     }
   }
@@ -62,4 +62,20 @@ export class ContactComponent {
     privacyField.checked = false;
 
   }
+
+  checkInvalidText() {
+    let nameField = this.nameField.nativeElement;
+
+    nameField.addEventListener('focus', function(){
+      return true;
+    });
+
+
+
+/*     if(nameField.invalid && nameField.focus()) {
+      return true;
+    } else {
+      return false;
+    } */
+  } 
 }

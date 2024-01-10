@@ -10,14 +10,14 @@
             <form #contactForm class="contactForm" (submit)="sendMail()" ngNativeValidate>
                 <div class="inputContainer">
                     <div class="inputSubContainer">
-                        <input type="text" name="name" #nameField required>
+                        <input ng-model="nameField.valid" type="text" name="name" #nameField required>
                         <div class="labelLine">Your name</div>
                         <div class="validationImages">
                             <img class="validImg" src="../../assets/img/icons/valid.png">
                             <img class="errorImg" src="../../assets/img/icons/error.png">
                         </div>
                     </div>
-                    <div class="inputNote">
+                    <div id="inputNote1" class="inputNote">
                         Your name is required
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                             <img class="errorImg" src="../../assets/img/icons/error.png">
                         </div>
                     </div>
-                    <div class="inputNote">
+                    <div id="inputNote2" class="inputNote">
                         Your email is required
                     </div>
                 </div>
@@ -45,14 +45,14 @@
                             <img class="errorImg" src="../../assets/img/icons/error.png">
                         </div>
                     </div>
-                    <div class="inputNote">
+                    <div id="inputNote3" class="inputNote">
                         A message is required
                     </div>
                 </div>
                 
-                <div>
-                    <div id="checkboxContainer" class="checkboxContainer">
-                        <img id="checkboxTick" class="checkboxTick" src="../../assets/img/icons/checkboxTick.svg">
+                <div class="privacyPolicy">
+                    <div id="checkboxContainer" class="checkboxContainer" (click)="acceptPrivacyPolicy()">
+                        <img id="checkboxTick" class="checkboxTick" [class.showTick]="privacyChecked" src="../../assets/img/icons/checkboxTick.svg">
                         <input #privacyField class="inputCheckbox" type="checkbox" required>
                         <div class="checkboxHoverContainer">
                         </div>
