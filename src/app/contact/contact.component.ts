@@ -6,6 +6,7 @@ import { Component, ElementRef, Input, ViewChild } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+  @Input() checkPrivacyPolicy = false;
   @Input() show = false;
   @Input() privacyChecked = false;
   @ViewChild('myForm') myForm!: ElementRef;
@@ -70,12 +71,19 @@ export class ContactComponent {
       return true;
     });
 
-
-
 /*     if(nameField.invalid && nameField.focus()) {
       return true;
     } else {
       return false;
     } */
   } 
+
+  
+  showPrivacyPolicy() {
+    if(this.checkPrivacyPolicy == false) {
+      this.checkPrivacyPolicy = true;
+    } else if(this.checkPrivacyPolicy == true) {
+          this.checkPrivacyPolicy = false;
+    }
+  }
 }

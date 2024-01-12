@@ -1,11 +1,21 @@
 <footer>
+    <div class="imprintContainer" *ngIf="checkImprint">
+        <div class="imprintSubContainer">
+            <div class="imprint">
+                <app-imprint></app-imprint>
+            </div>  
+            <div class="buttonContainer">
+                <button (click)="showImprint()" class="button">Close</button>
+            </div>
+        </div>
+    </div>
     <div>
         <img src="../../assets/img/logo.png">
     </div>
     <div>
         <div>© Tobias Odermatt 2023</div>
         <div class="impressum">
-            <a href="">Impressum</a>
+            <a (click)="showImprint()">Impressum</a>
             <div class="whiteLine"></div>
         </div>
     </div>
