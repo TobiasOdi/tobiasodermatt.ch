@@ -83,21 +83,28 @@ footer > div:last-of-type > a:hover {
     width: 80vw;
     border-radius: 1rem;
     padding: 2rem;
+    padding-bottom: 0;
 }
 
 .imprint {
+    height: 80%;
+    width: 100%;
+}
+
+.imprint app-imprint {
     height: 100%;
     width: 100%;
 }
 
-.impressum app-imprint {
-    height: 100%;
+.buttonContainer {
+    height: 20%;
     width: 100%;
-}
-
-.imprint > .buttonContainer {
-    height: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
+}
+
+.impressum a {
+    cursor: pointer;
 }
