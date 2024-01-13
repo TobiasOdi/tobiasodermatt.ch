@@ -8,8 +8,8 @@
     align-items: center;
     padding-left: 2rem;
     padding-right: 2rem;
-    background: linear-gradient(#FFF 30%, #EAF0FF);
-
+    background: linear-gradient(#FFF 30%, $blue);
+    /* background: linear-gradient(#FFF 30%, #EAF0FF); */
 
     > div {
         width: 50%;
@@ -54,7 +54,8 @@
 .greeting > div:first-of-type {
     font-size: 64px;
     text-align: left;
-    color: $portfolio-main-blue;
+    color: $blue;
+    /* color: $portfolio-main-blue; */    
     word-wrap: break-word;
 }
 
@@ -66,7 +67,8 @@
 
     > div {
         font-size: 100px;
-        color: #5988FF;
+        color: $blue;
+        /* color: #5988FF; */        
         text-align: left;
         font-family: 'Baloo 2', sans-serif;
         font-weight: bold;

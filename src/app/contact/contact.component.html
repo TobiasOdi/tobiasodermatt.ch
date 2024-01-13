@@ -61,15 +61,14 @@
                     </div>
                 </div>
                 
-                <div class="privacyPolicy">
+                <div class="privacyPolicyConsent">
                     <div id="checkboxContainer" class="checkboxContainer" (click)="acceptPrivacyPolicy()">
                         <img id="checkboxTick" class="checkboxTick" [class.showTick]="privacyChecked" src="../../assets/img/icons/checkboxTick.svg">
                         <input #privacyField class="inputCheckbox" type="checkbox" required>
                         <div class="checkboxHoverContainer">
                         </div>
                     </div>
-                    <div>
-                        I've read the <a (click)="showPrivacyPolicy()">privacy policy</a> and agree to the processing of my data as outlined.
+                    <div>I've read the <a (click)="showPrivacyPolicy()">privacy policy</a> and agree to the processing of my data as outlined.
                     </div>
                 </div>
                 <button type="submit" class="button" #submitButton>Send message</button>

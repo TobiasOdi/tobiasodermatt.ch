@@ -1,4 +1,3 @@
-
 $portfolio-bright-blue: #0043F0;
 $portfolio-main-blue: #5988FF;
 $portfolio-very-light-blue: #EAF0FF;
@@ -27,8 +26,9 @@ body {
     min-width: 137px;
     height: 58px;
     border-radius: 10px;
-    border: 2px solid #5988FF;
-    color: #5988FF;
+    border: 2px solid $blue;
+    color: $blue;
+    /* color: #5988FF; */    
     padding: 15px 30px 15px 30px;
     cursor: pointer;
     font-size: 23px;
@@ -37,17 +37,18 @@ body {
     text-decoration: none;
 
     &.button:hover {
-        background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+        background: linear-gradient(128.94deg, #5988FF -33.96%, $blue 112.25%);
+        /* background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%); */        
         color: white;
         transition: all 300ms ease;
     }
 }
 
 .title {
-
+    color: $blue;
 }
 
 .text {
-    
+    color: $blue;
 }
 

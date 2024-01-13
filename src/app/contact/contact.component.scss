@@ -1,3 +1,5 @@
+@import '../../styles.scss';
+
 .contactContainer {
     width: 100%;
     padding-left: 2rem;
@@ -5,11 +7,61 @@
 
     > div:first-of-type {
         font-size: 90px;
-        color: #5988FF;
+        color: $blue;
+        /* color: #5988FF; */
         font-family: 'Baloo 2', sans-serif;
         font-weight: bold;
     }
 }
+
+/* ========================= PRIVACY POLICY ============================ */
+.privacyPolicyContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background: rgba(0,0,0,0.6);
+    z-index: 100;
+}
+
+.privacyPolicySubContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+    height: 80vh;
+    width: 80vw;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.privacyPolicy {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.privacyPolicy app-data-protection {
+    height: 100%;
+    width: 100%;
+}
+
+.privacyPolicy > .buttonContainer {
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ================================================================ */
 
 .contactSubContainer {
     width: 100%;
@@ -31,7 +83,8 @@
         font-size: 32px;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
-        color: #5988FF;
+        color: $blue;
+        /* color: #5988FF; */
     }
 }
 
@@ -85,7 +138,8 @@
 .inputSubContainer > input,
 .inputSubContainer > textarea {
     position: absolute;
-    border: 1px solid #5988FF;
+    border: 1px solid $blue;
+    /* border: 1px solid #5988FF; */
     background: transparent;
     outline: none;
     padding: 0 20px;
@@ -209,12 +263,13 @@
 }
 
 /* ========================== CHECKBOX ========================== */
-.privacyPolicy {
+.privacyPolicyConsent {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
 }
-
 .checkboxContainer {
     position: relative;
     height: 18px;
@@ -224,7 +279,8 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    border: 2px solid #5988FF;
+    border: 2px solid $blue;
+    /* border: 2px solid #5988FF;*/
     border-radius: 3px;
 }
 
@@ -255,52 +311,20 @@
     display: block;
 }
 
-/* ================== PRIVACY POLICY ============== */
-/* ========================= IMPRINT ============================ */
-.privacyPolicyContainer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    background: rgba(0,0,0,0.6);
-    z-index: 100;
+.privacyPolicyConsent > div:last-of-type a {
+    cursor: pointer;
+    text-decoration: none;
+    color: $light-blue;
+    /* color: #5988FF; */
+    display: inline-block;
+    width: 118px;
 }
 
-.privacyPolicySubContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: white;
-    height: 80vh;
-    width: 80vw;
-    border-radius: 1rem;
-    padding: 2rem;
+.privacyPolicyConsent > div:last-of-type a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
-
-.privacyPolicy {
-    height: 100%;
-    width: 100%;
-}
-
-.privacyPolicy app-data-protection {
-    height: 100%;
-    width: 100%;
-}
-
-.privacyPolicy > .buttonContainer {
-    height: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 
 
 

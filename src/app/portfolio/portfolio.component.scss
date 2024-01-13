@@ -1,3 +1,5 @@
+@import '../../styles.scss';
+
 .portfolioContainer {
     display: flex;
     flex-direction: column;
@@ -13,7 +15,8 @@
     font-family: 'Baloo 2', sans-serif;
     font-weight: bold;
     line-height: 0.8;
-    color: #5988FF;
+    color: $blue;
+    /* color: #5988FF; */
 }
 
 .portfolioDescription {
@@ -100,7 +103,8 @@
 
 .projectTitle {
     font-size: 45px;
-    color: #5988FF;
+    color: $blue;
+    /* color: #5988FF; */
     font-family: 'Baloo 2', sans-serif;
     font-weight: bold;
     line-height: 1;
@@ -108,7 +112,8 @@
 
 .usedSkills {
     font-size: 23px;
-    color: #5988FF;
+    color: $blue;
+    /* color: #5988FF; */
 }
 
 .projectDescription {
