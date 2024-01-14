@@ -3,8 +3,8 @@
 header {
     height: 80px;
     z-index: 1;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 
 .desktopMenu {
     height: inherit;
@@ -25,7 +25,7 @@ header {
         }
 
         img {
-            height: 50px;
+            height: 30px;
             cursor: pointer;
         }
     }
@@ -40,22 +40,22 @@ header {
             width: fit-content;
         }
 
-/*         > div:first-of-type {
-            min-width: 125px;
+        > div:first-of-type {
+            width: 130px;
         }
 
         > div:nth-of-type(2) {
-            min-width: 145px;
+            width: 145px;
         }
 
         > div:nth-of-type(3) {
-            min-width: 105px;
+            width: 105px;
         }
 
         > div:last-of-type {
-            min-width: 100px;
+            width: 100px;
         }
- */
+
         a {
             text-align: right;
             font-weight: 400;
@@ -81,7 +81,7 @@ header {
     cursor: pointer;
 
     > img {
-        height: 50px;
+        height: 30px;
         cursor: pointer;
     }
 
@@ -148,7 +148,7 @@ header {
     }
 
     a {
-        text-align: right;
+        text-align: center;
         font-weight: 400;
         color: $blue;
         /* color: #5988FF; */       
@@ -258,12 +258,12 @@ header {
 }
 
 input:checked + .slider {
-    background-color: $blue;
+    background-color: $very-light-blue;
     /* background-color: #5988FF; */
 }
 
 input:focus + .slider {
-    box-shadow: 0 0 1px $blue;
+    box-shadow: 0 0 1px $very-light-blue;
     /* #5988FF */
 }
 
@@ -286,15 +286,32 @@ input:checked + .slider:before {
 /* ==================== RESPONSIVENESS ================== */
 @media (max-width: 1080px) {
     header {
-        padding-left: 2rem;
-        padding-right: 2rem;
-
         > .desktopMenu {
             > .desktopMenuRightSide{
     
                 a {
-                    font-size: 18px;
+                    font-size: 20px;
                 }
+            }
+        }
+    }
+
+    .desktopMenu {
+        > .desktopMenuRightSide {
+            > div:first-of-type {
+                width: 110px !important;
+            }
+        
+            > div:nth-of-type(2) {
+                width: 115px!important;
+            }
+        
+            > div:nth-of-type(3) {
+                width: 85px!important;
+            }
+        
+            > div:last-of-type {
+                width: 75px!important;
             }
         }
     }
@@ -315,6 +332,21 @@ input:checked + .slider:before {
         display: none;
     }
 }
+
+@media (max-width: 480px) {
+    header {
+        padding-left: 1rem;
+        padding-right: 1em;
+    }
+}
+
+
+
+
+
+
+
+
 
 
 

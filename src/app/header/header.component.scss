@@ -8,7 +8,7 @@
     align-items: center;
     padding-left: 2rem;
     padding-right: 2rem;
-    background: linear-gradient(#FFF 30%, $blue);
+    background: linear-gradient(#FFF 50%, $blue 100%);
     /* background: linear-gradient(#FFF 30%, #EAF0FF); */
 
     > div {
@@ -84,35 +84,57 @@
     align-items: flex-end;
     gap: 20px;
 
+    > a {
+        width: 50px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        transition: 0.3s ease;
+    }
+
     > a > div {
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 30px;
     }
 }
 
 .defGitBtn {
-    background: url(../../assets/img/icons/defGitBtn.png) no-repeat;
+    background: url(../../assets/img/icons/Github_button.png) no-repeat;
 }
 
-.defGitBtn:hover {
-    background: url(../../assets/img/icons/hovGitBtn.png) no-repeat;
+.icons > a:first-of-type:hover {
+    justify-content: flex-start;
+    transition: 0.3s ease;
 }
+
+.icons > a:first-of-type:hover > .defGitBtn {
+    background: url(../../assets/img/icons/hovGitBtn1.svg) no-repeat;
+} 
 
 .defLinkBtn {
-    background: url(../../assets/img/icons/defLinkBtn.png) no-repeat;
+    background: url(../../assets/img/icons/Linkedin_button.png) no-repeat;
 }
 
-.defLinkBtn:hover {
-    background: url(../../assets/img/icons/hovLinkBtn.png) no-repeat;
+.icons > a:nth-of-type(2):hover {
+    justify-content: flex-start;
+    transition: 0.3s ease;
+}
+
+.icons > a:nth-of-type(2):hover > .defLinkBtn {
+    background: url(../../assets/img/icons/hovLinkBtn1.svg) no-repeat;
 }
 
 .defMailBtn {
-    background: url(../../assets/img/icons/defMailBtn.png) no-repeat;
+    background: url(../../assets/img/icons/Email_button.png) no-repeat;
 }
 
-.defMailBtn:hover {
-    background: url(../../assets/img/icons/hovMailBtn.png) no-repeat;
-    
+.icons > a:last-of-type:hover {
+    justify-content: flex-start;
+    transition: 0.3s ease;
+}
+
+.icons > a:last-of-type:hover > .defMailBtn {
+    background: url(../../assets/img/icons/hovMailBtn1.svg) no-repeat;
 }
 
 /* ================= RESPONSIVENESS ================= */
