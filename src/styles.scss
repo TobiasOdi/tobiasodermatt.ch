@@ -49,7 +49,70 @@ body {
     color: $blue;
 }
 
+.descriptionText {
+    color: $blue;
+}
+
 .text {
     color: $blue;
+}
+
+/* ==================== RESPONSIVNESS ==================== */
+
+@media(max-width: 1080px) {
+
+}
+
+@media(max-width: 720px) {
+    .button {
+    }
+
+    .title {
+    }
+    
+    .descriptionText {
+    }
+    
+    .text {
+    }
+}
+
+@media(max-width: 480px) {
+    .button {
+    }
+
+    .title {
+    }
+    
+    .descriptionText {
+    }
+    
+    .text {
+    }
+}
+
+@media(max-width: 360px) {
+    .button {
+    }
+
+    .title {
+    }
+    
+    .descriptionText {
+    }
+    
+    .text {
+    }
+}
+
+@media(max-width: 300px) {
+    .title {
+    }
+    
+    .descriptionText {
+    }
+    
+    .text {
+    }
 }
 
