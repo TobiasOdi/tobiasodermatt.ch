@@ -40,14 +40,12 @@
     width: 80vw;
     border-radius: 1rem;
     padding: 2rem;
+    padding-bottom: 0;
 }
 
 .privacyPolicy {
-    height: 100%;
+    height: 80%;
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
 }
 
 .privacyPolicy app-data-protection {
@@ -55,11 +53,13 @@
     width: 100%;
 }
 
-.privacyPolicy > .buttonContainer {
-    height: 15%;
+.buttonContainer {
+    height: 20%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
 }
 /* ================================================================ */
 

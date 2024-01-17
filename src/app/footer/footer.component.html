@@ -9,25 +9,30 @@
             </div>
         </div>
     </div>
-    <div class="footerLogo">
-        <img src="../../assets/img/Tobias Logo.png">
-    </div>
-    <div class="footerImprintContainer">
+
+    <div class="footerRowOne">
+        <div class="footerLogo">
+            <img src="../../assets/img/Tobias Logo.png">
+        </div>
         <div>© Tobias Odermatt 2023</div>
-        <div class="impressum">
-            <a (click)="showImprint()">Impressum</a>
-            <div class="whiteLine"></div>
+        <div>
+            <a href="https://github.com/TobiasOdi">
+                <img src="../../assets/img/icons/Github_button.png" class="icon">
+            </a>
+            <a href="https://www.linkedin.com/in/tobias-odermatt-75a619247/">
+                <img src="../../assets/img/icons/Linkedin_button.png" class="icon">
+            </a>
+            <a href="mailto: odermatt.tobias.w@gmail.com">
+                <img src="../../assets/img/icons/Email_button.png" class="icon">
+            </a>
         </div>
     </div>
-    <div>
-        <a href="https://github.com/TobiasOdi">
-            <img src="../../assets/img/icons/Github_button.png" class="icon">
-        </a>
-        <a href="https://www.linkedin.com/in/tobias-odermatt-75a619247/">
-            <img src="../../assets/img/icons/Linkedin_button.png" class="icon">
-        </a>
-        <a href="mailto: odermatt.tobias.w@gmail.com">
-            <img src="../../assets/img/icons/Email_button.png" class="icon">
-        </a>
+    <div class="footerRowTwo">
+        <div class="footerImprintContainer">
+            <div class="imprintLink">
+                <a (click)="showImprint()">Impressum</a>
+                <div class="whiteLine"></div>
+            </div>
+        </div>
     </div>
 </footer>

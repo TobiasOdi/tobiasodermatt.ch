@@ -57,6 +57,67 @@ body {
     color: $blue;
 }
 
+/* ================================================================ SCROLLBAR ====================================================== */
+/* 
+  Container Class: 
+    -   height: calc(100vh - 89px); => absolute height
+    -   overflow: hidden;
+
+  Subcontainer Class: 
+    -  height: 100%;
+    -  overflow-x: hidden;
+    -  overflow-y: scroll;
+    -  overflow: auto;
+*/
+
+.imprintContent::-webkit-scrollbar,
+.dataProtectionContent::-webkit-scrollbar   {
+  width: 10px;
+  scrollbar-gutter: stable;
+}
+
+.imprintContent::-webkit-scrollbar-thumb,
+.dataProtectionContent::-webkit-scrollbar-thumb {
+  background-color: #a8a8a8;
+  border: 2px solid white;
+  border-radius: 6px;
+}
+
+.imprintContent::-webkit-scrollbar-button,
+.dataProtectionContent::-webkit-scrollbar-button {
+  color: #a8a8a8;
+}
+
+.imprintContent::-webkit-scrollbar-button,
+.dataProtectionContent::-webkit-scrollbar-button {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+}
+
+/* .imprintContent::-webkit-scrollbar-button:vertical:start:increment,
+  .dataProtectionContent::-webkit-scrollbar-button:vertical:start:increment {
+  background-image: url(../img/upArrow.svg);
+  background-size: 10px 4px;
+} */
+
+.imprintContent::-webkit-scrollbar-button:vertical:start:decrement,
+.dataProtectionContent::-webkit-scrollbar-button:vertical:start:decrement  {
+  display: none;
+}
+
+.imprintContent::-webkit-scrollbar-button:vertical:end:increment,
+.dataProtectionContent::-webkit-scrollbar-button:vertical:end:increment {
+  display: none;
+}
+
+/* .imprintContent::-webkit-scrollbar-button:vertical:end:decrement,
+  .dataProtectionContent::-webkit-scrollbar-button:vertical:end:decrement {
+  background-image: url(../img/downArrow.svg);
+  background-size: 10px 4px;
+} */
+
 /* ==================== RESPONSIVNESS ==================== */
 
 @media(max-width: 1080px) {

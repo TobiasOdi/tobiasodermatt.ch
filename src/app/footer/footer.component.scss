@@ -6,10 +6,24 @@ footer {
     /* background: linear-gradient(128.94deg, #5988FF -33.96%, $light-blue 36.71%, $blue 112.25%); */ 
     /* background: radial-gradient(71.18% 335.57% at 28.82% -124.4%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%); */
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding-left: 2rem;
     padding-right: 2rem;
+}
+
+.footerRowOne {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerRowTwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footerLogo {
@@ -23,17 +37,19 @@ footer {
     width: auto;
 }
 
+.footerRowOne > div:nth-of-type(2),
 .footerImprintContainer > div {
     color: white;
 }
 
-.impressum {
+.imprintLink {
     font-size: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
     align-items: center;
     gap: 5px;
+    cursor: pointer;
 
     > a {
         color: white;
@@ -48,18 +64,18 @@ footer {
     opacity: 0;
 }
 
-.impressum:hover > div {
+.imprintLink:hover > div {
     opacity: 1;
 }
 
-footer > div:last-of-type {
+.footerRowOne > div:last-of-type {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
 }
 
-footer > div:last-of-type > a:hover {
+.footerRowOne > div:last-of-type > a:hover {
     scale: 1.2;
 }
 
