@@ -1,17 +1,14 @@
 @import '../../styles.scss';
 
 .contactContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4rem;
     width: 100%;
     padding-left: 2rem;
     padding-right: 2rem;
-
-    > div:first-of-type {
-        font-size: 90px;
-        color: $blue;
-        /* color: #5988FF; */
-        font-family: 'Baloo 2', sans-serif;
-        font-weight: bold;
-    }
 }
 
 /* ========================= PRIVACY POLICY ============================ */
@@ -66,20 +63,36 @@
 .contactSubContainer {
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
 
     > div {
+        width: 100%;
+    }
+
+    > div:first-of-type {
+        font-size: 90px;
+        color: $blue;
+        /* color: #5988FF; */
+        font-family: 'Baloo 2', sans-serif;
+        font-weight: bold;
+    }
+
+    > div:last-of-type {
+        display: flex;
+        gap: 20px;
+    }
+
+    > div:last-of-type > div{
         width: 50%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        gap: 2rem;
     }
 
-    > div:first-of-type > div:first-of-type {
+    > div:last-of-type > div:first-of-type >  div:first-of-type {
         font-size: 32px;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
@@ -268,7 +281,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 }
 .checkboxContainer {
     position: relative;
@@ -330,13 +343,20 @@
 
 /* ================== RESPONSIVENESS ============== */
 @media (max-width: 720px) {
-    .contactContainer {
-        > div:first-of-type {
-            font-size: 80px;
-        }
+    .privacyPolicySubContainer {
+        height: 90vh;
+        width: 90vw;
+    }
+    
+    .privacyPolicy {
+        height: 85%;
+    }
+    
+    .buttonContainer {
+        height: 15%;
     }
 
-    .contactSubContainer {
+    .contactSubContainer > div:last-of-type {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -358,35 +378,34 @@
 }
 
 @media (max-width: 480px) {
+    .privacyPolicySubContainer {
+        padding: 1rem;
+    }
+
+    .buttonContainer {
+        padding: 1rem;
+    }
+
     .contactContainer {
         padding-left: 1rem;
         padding-right: 1rem;
-
-        > div:first-of-type {
-            font-size: 65px;
-        }
     }
 
-    .contactSubContainer {
-        > div:first-of-type > div:first-of-type {
-            font-size: 20px;
-        }
+    .contactSubContainer > div:first-of-type {
+        font-size: 65px;
+    }
+
+    .contactSubContainer > div:last-of-type > div:first-of-type > div:first-of-type {
+        font-size: 20px;
     }
 }
 
 @media (max-width: 360px) {
-    .contactContainer {
-        padding-left: 1rem;
-        padding-right: 1rem;
-
-        > div:first-of-type {
-            font-size: 50px;
-        }
+    .contactSubContainer > div:first-of-type {
+        font-size: 50px;
     }
 
-    .contactSubContainer {
-        > div:first-of-type > div:first-of-type {
-            font-size: 18px;
-        }
+    .contactSubContainer > div:last-of-type > div:first-of-type > div:first-of-type {
+        font-size: 18px;
     }
 }

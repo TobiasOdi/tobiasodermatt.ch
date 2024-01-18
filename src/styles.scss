@@ -125,8 +125,12 @@ body {
 }
 
 @media(max-width: 720px) {
-    .button {
-    }
+  .button {
+    min-width: 120px;
+    height: 50px;
+    padding: 10px 25px 10px 25px;
+    font-size: 20px;
+  }
 
     .title {
     }
@@ -139,8 +143,10 @@ body {
 }
 
 @media(max-width: 480px) {
-    .button {
-    }
+  .button {
+    min-width: 100px;
+    height: 45px;
+  }
 
     .title {
     }
