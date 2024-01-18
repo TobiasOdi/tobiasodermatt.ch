@@ -166,8 +166,6 @@
 
 .inputSubContainer > textarea {
     height: 150px;
-    min-height: 55px;
-    max-height: 150px;
     line-height: normal;
     padding-top: 1rem;
 
@@ -184,10 +182,6 @@
     font-size: 16px;
 }
 
-.contactForm > .inputContainer:nth-of-type(3) > .inputSubContainer{
-    height: 150px;
-}
-
 .labelLine {
     background-color: white;
     position: absolute;
@@ -201,6 +195,19 @@
     font-size: 12px;
     color: red;
     transition: 0.3s ease;
+}
+
+.contactForm > div:nth-of-type(3) textarea,
+.contactForm > div:nth-of-type(3) .labelLine,
+.contactForm > div:nth-of-type(3) .validationImages {
+    height: 150px;
+}
+
+.contactForm > div:nth-of-type(3) .validationImages {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-top: 12px;
 }
 
 .inputSubContainer > input:focus + .labelLine,
@@ -241,7 +248,9 @@
 }
 
 .inputSubContainer > input:focus:invalid ~ .validationImages > .errorImg,
-.inputSubContainer > textarea:focus:invalid ~ .validationImages > .errorImg {
+.inputSubContainer > textarea:focus:invalid ~ .validationImages > .errorImg,
+.inputSubContainer > input:focus:invalid ~ .inputNote,
+.inputSubContainer > textarea:focus:invalid ~ .inputNote {
     display: flex;
 }
 
