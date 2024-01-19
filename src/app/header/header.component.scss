@@ -85,16 +85,18 @@
     gap: 20px;
 
     > a {
-        width: 50px;
+        width: 60px;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         transition: 0.3s ease;
     }
 
-    > a > div > div {
+    > a > div {
         height: 30px;
         width: 30px;
+        border-radius: 50%;
+
     }
 }
 
@@ -109,15 +111,15 @@
     transition: 0.3s ease;
 }
 
-.icons > a:first-of-type:hover > div {
+/* .icons > a:first-of-type:hover > div {
     background-color: white;
     border-radius: 50%;
-}
+} */
 
 
-.icons > a:first-of-type:hover .defGitBtn {
+/* .icons > a:first-of-type:hover .defGitBtn {
     background: url(../../assets/img/icons/hovGitBtn1.svg) no-repeat;
-} 
+}  */
 
 /* === LINK BTN === */
 .defLinkBtn {
@@ -129,14 +131,14 @@
     transition: 0.3s ease;
 }
 
-.icons > a:nth-of-type(2):hover > div {
+/* .icons > a:nth-of-type(2):hover > div {
     background-color: white;
     border-radius: 50%;
 }
 
 .icons > a:nth-of-type(2):hover .defLinkBtn {
     background: url(../../assets/img/icons/hovLinkBtn1.svg) no-repeat;
-}
+} */
 
 /* === MAIL BTN === */
 .defMailBtn {
@@ -148,14 +150,14 @@
     transition: 0.3s ease;
 }
 
-.icons > a:last-of-type:hover > div {
+/* .icons > a:last-of-type:hover > div {
     background-color: white;
     border-radius: 50%;
 }
 
 .icons > a:last-of-type:hover .defMailBtn {
     background: url(../../assets/img/icons/hovMailBtn1.svg) no-repeat;
-}
+} */
 
 /* ================= RESPONSIVENESS ================= */
 @media (max-width: 1080px) {

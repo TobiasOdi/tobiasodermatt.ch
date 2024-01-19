@@ -2,3 +2,10 @@
     height: 100%;
     overflow: auto;
 }
+
+/* ================== RESPONSIVENESS ==================== */
+@media(max-width: 320px) {
+    .dataProtectionContent p {
+        font-size: 14px;
+    }
+}

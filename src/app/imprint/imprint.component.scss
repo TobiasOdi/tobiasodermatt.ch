@@ -3,3 +3,10 @@
     overflow: auto;
 }
 
+/* ================== RESPONSIVENESS ==================== */
+@media(max-width: 320px) {
+    .imprintContent p {
+        font-size: 14px;
+    }
+}
+
