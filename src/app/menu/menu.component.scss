@@ -25,7 +25,7 @@ header {
         }
 
         img {
-            height: 30px;
+            height: 40px;
             cursor: pointer;
         }
     }
@@ -131,20 +131,8 @@ header {
     justify-content: center;
     gap: 1.5rem;
 
-    > div:first-of-type {
-        min-width: 125px;
-    }
-
-    > div:nth-of-type(2) {
-        min-width: 145px;
-    }
-
-    > div:nth-of-type(3) {
-        min-width: 105px;
-    }
-
-    > div:last-of-type {
-        min-width: 100px;
+    > div {
+        width: auto;
     }
 
     a {

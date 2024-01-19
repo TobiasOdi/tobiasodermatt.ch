@@ -20,7 +20,6 @@ export class SlideshowComponent implements OnInit {
   }
 
   updateImage() {
-
     setInterval(() => {
       this.currentImage++;
       this.currentImage = this.currentImage % this.images.length;
