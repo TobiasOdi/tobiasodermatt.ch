@@ -1,6 +1,6 @@
 {
     "Über mich": "About me",
-    "Fähigkeiten": "Skill set",
+    "Skills": "Skills",
     "Kontakt": "Contact",
 
     "Hallo! Ich bin Tobias": "Hello! I am Tobias",
@@ -9,6 +9,17 @@
     "Kontaktiere mich": "Contact me",
 
     "Dies ist eine Sammlung meiner bisherigen Projekte, welche gerne ausprobiert werden können.": "This is a collection of my previous projects, which you are welcome to try out.",
-    "Taks-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.": "Taks manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
-
+    "Taks-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.": "Taks manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+    "Basierend auf der PokéAPI, einer einfachen Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.": "Based on the PokéAPI a simple library that provides and catalogues pokemon information.",
+    "Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.": "Contact me using this form. I am interested in getting to know your ideas and contributing to your projects with my work.",
+    "Möchten Sie ein neues Projekt besprechen?": "Want to discuss a new project?",
+    "Brauchen Sie einen Frontend-Entwickler? Kontaktieren Sie mich!": "Need a Frontend developer? Contact me!",
+    "Name": "Your name",
+    "E-Mail": "Your email",
+    "Nachricht": "Your message",
+    "Datenschutzerklärung": "privacy policy",
+    "Ich habe die": "I've read the",
+    "gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.": "and agree to the processing of my data as outlined.",
+    "Nachricht senden": "Send message"
 }

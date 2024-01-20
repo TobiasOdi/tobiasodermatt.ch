@@ -7,7 +7,10 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
-    background: linear-gradient(128.94deg, $light-blue -33.96%, $blue 112.25%)
+    background: linear-gradient(128.94deg, $light-blue -33.96%, $blue 112.25%);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
     /* background: linear-gradient(128.94deg, #5988FF -33.96%, $light-blue 36.71%, $blue 112.25%); */    
     /* background: linear-gradient(128.94deg, #5988FF -33.96%, #5988FF 36.71%, #0043F0 112.25%); */
 }

@@ -38,12 +38,12 @@ header {
             width: fit-content;
         }
 
-        > div:first-of-type {
+/*         > div:first-of-type {
             width: 130px;
         }
 
         > div:nth-of-type(2) {
-            width: 145px;
+            width: 60px;
         }
 
         > div:nth-of-type(3) {
@@ -52,7 +52,7 @@ header {
 
         > div:last-of-type {
             width: 100px;
-        }
+        } */
 
         a {
             text-align: right;
@@ -64,8 +64,16 @@ header {
             transition: font-weight 300ms ease;
     
             &:hover {
-                font-weight: 700;
+                font-weight: bold;
                 transition: font-weight 300ms ease;
+            }
+
+            &::after {
+                content: attr(data-text);
+                height: 0;
+                visibility: hidden;
+                overflow: hidden;
+                font-weight: bold;
             }
         }
     }
@@ -286,10 +294,6 @@ input:checked + .slider:before {
         > .desktopMenuRightSide {
             > div:first-of-type {
                 width: 110px !important;
-            }
-        
-            > div:nth-of-type(2) {
-                width: 115px!important;
             }
         
             > div:nth-of-type(3) {

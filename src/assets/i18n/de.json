@@ -1,6 +1,6 @@
 {
     "Über mich": "Über mich",
-    "Fähigkeiten": "Fähigkeiten",
+    "Skills": "Skills",
     "Kontakt": "Kontakt",
 
     "Hallo! Ich bin Tobias": "Hallo! Ich bin Tobias",
@@ -11,5 +11,17 @@
     "Kontaktiere mich": "Kontaktiere mich",
 
     "Dies ist eine Sammlung meiner bisherigen Projekte, welche gerne ausprobiert werden können.": "Dies ist eine Sammlung meiner bisherigen Projekte, welche gerne ausprobiert werden können.",
-    "Taks-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.": "Taks-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
+    "Taks-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.": "Taks-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+    "Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.": "Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.",
+    "Basierend auf der PokéAPI, einer einfachen Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.": "Basierend auf der PokéAPI, einer einfachen Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.",
+    "Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.": "Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.",
+    "Möchten Sie ein neues Projekt besprechen?": "Möchten Sie ein neues Projekt besprechen?",
+    "Brauchen Sie einen Frontend-Entwickler? Kontaktieren Sie mich!": "Brauchen Sie einen Frontend-Entwickler? Kontaktieren Sie mich!",
+    "Name": "Name",
+    "E-Mail": "E-Mail",
+    "Nachricht": "Nachricht",
+    "Datenschutzerklärung": "Datenschutzerklärung",
+    "Ich habe die": "Ich habe die",
+    "gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.": "gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.",
+    "Nachricht senden": "Nachricht senden"
 }
