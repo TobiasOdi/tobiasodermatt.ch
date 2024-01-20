@@ -3,8 +3,6 @@
 header {
     height: 80px;
     z-index: 1;
-    padding-left: 2rem;
-    padding-right: 2rem;
 
 .desktopMenu {
     height: inherit;
@@ -321,12 +319,6 @@ input:checked + .slider:before {
     }
 }
 
-@media (max-width: 480px) {
-    header {
-        padding-left: 1rem;
-        padding-right: 1em;
-    }
-}
 
 
 

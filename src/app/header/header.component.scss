@@ -6,8 +6,6 @@
     display: flex;
     justify-self: center;
     align-items: center;
-    padding-left: 2rem;
-    padding-right: 2rem;
     background: linear-gradient(#FFF 20%, $light-blue 60%, $blue 95%);
     /* background: linear-gradient(#FFF 30%, #EAF0FF); */
 
@@ -160,14 +158,38 @@
 } */
 
 /* ================= RESPONSIVENESS ================= */
-@media (max-width: 1080px) {
+@media (max-width: 1130px) {
     .greeting > div:first-of-type {
-        font-size: 54px;
+        font-size: 60px;
     }
     
     .greeting > div:last-of-type  {
         > div {
+            font-size: 90px;
+        }
+    }
+}
+
+@media (max-width: 1020px) {
+    .greeting > div:first-of-type {
+        font-size: 55px;
+    }
+
+    .greeting > div:last-of-type  {
+        > div {
             font-size: 80px;
+        }
+    }
+}
+
+@media (max-width: 920px) {
+    .greeting > div:first-of-type {
+        font-size: 50px;
+    }
+
+    .greeting > div:last-of-type  {
+        > div {
+            font-size: 75px;
         }
     }
 }
@@ -193,21 +215,29 @@
     }
 
     .greeting > div:first-of-type {
-        font-size: 40px;
+        font-size: 60px;
     }
 
     .greeting > div:last-of-type  {
         > div {
-            font-size: 65px;
+            font-size: 90px;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .greeting > div:first-of-type {
+        font-size: 50px;
+    }
+
+    .greeting > div:last-of-type  {
+        > div {
+            font-size: 75px;
         }
     }
 }
 
 @media (max-width: 480px) {
-    .headerContainer {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
     .greeting > div:first-of-type {
         font-size: 35px;
     }
@@ -231,7 +261,7 @@
 }
 
 @media (max-width: 300px) {
-/*     .greeting > div:first-of-type {
+    .greeting > div:first-of-type {
         font-size: 25px;
     }
 
@@ -239,5 +269,5 @@
         > div {
             font-size: 40px;
         }
-    } */
+    }
 }

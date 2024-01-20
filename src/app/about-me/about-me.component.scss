@@ -5,8 +5,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 3rem;
-    padding-right: 3rem;
 }
 
 .aboutMe {
@@ -15,19 +13,6 @@
     align-items: flex-start;
     justify-content: center;
     width: 50%;
-
-    div:first-of-type {
-        font-size: 100px;
-        font-family: 'Baloo 2', sans-serif;
-        font-weight: bold;
-        color: $blue;
-        /* color: #5988FF; */        
-        line-height: 0.8;
-    }
-
-    div:last-of-type {
-        font-size: 23px;
-    }
 }
 
 .aboutMeProfilePicture {
@@ -44,14 +29,6 @@
 }
 
 /* ================= RESPONSIVENESS ================= */
-@media (max-width: 1080px) {
-    .aboutMe {
-        div:first-of-type {
-            font-size: 80px;
-    }
-    }
-}
-
 @media (max-width: 870px) {
     .aboutMeProfilePicture {
         display: none;
@@ -72,16 +49,7 @@
 }
 
 @media (max-width: 480px) {
-    .aboutMeContainer {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
     .aboutMe {
-        div:first-of-type {
-            font-size: 65px;
-        }
-
         div:last-of-type {
             font-size: 18px;
         }
@@ -89,14 +57,9 @@
 }
 
 @media (max-width: 480px) {
-    .aboutMe {
-        div:first-of-type {
-            font-size: 50px;
-        }
-
         div:last-of-type {
             font-size: 16px;
         }
-    }
 }
+
 

@@ -7,8 +7,6 @@
     justify-content: center;
     gap: 4rem;
     width: 100%;
-    padding-left: 2rem;
-    padding-right: 2rem;
 }
 
 /* ========================= PRIVACY POLICY ============================ */
@@ -71,17 +69,9 @@
         width: 100%;
     }
 
-    > div:first-of-type {
-        font-size: 90px;
-        color: $blue;
-        /* color: #5988FF; */
-        font-family: 'Baloo 2', sans-serif;
-        font-weight: bold;
-    }
-
     > div:last-of-type {
         display: flex;
-        gap: 20px;
+        gap: 1.5rem;
     }
 
     > div:last-of-type > div{
@@ -90,6 +80,7 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
+        gap: 2rem;
     }
 
     > div:last-of-type > div:first-of-type >  div:first-of-type {
@@ -369,7 +360,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 20px;
+        gap: 3rem;
 
         > div {
             width: 100%;
@@ -377,7 +368,6 @@
             flex-direction: column;
             align-items: flex-start;
             justify-content: flex-start;
-            gap: 2rem;
         }
 
         > div:first-of-type > div:first-of-type {
@@ -395,25 +385,12 @@
         padding: 1rem;
     }
 
-    .contactContainer {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
-    .contactSubContainer > div:first-of-type {
-        font-size: 65px;
-    }
-
     .contactSubContainer > div:last-of-type > div:first-of-type > div:first-of-type {
         font-size: 20px;
     }
 }
 
 @media (max-width: 360px) {
-    .contactSubContainer > div:first-of-type {
-        font-size: 50px;
-    }
-
     .contactSubContainer > div:last-of-type > div:first-of-type > div:first-of-type {
         font-size: 18px;
     }

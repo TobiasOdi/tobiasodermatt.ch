@@ -15,8 +15,12 @@ $very-light-blue: #676eac;
 
 body {
     margin: 0;
-/*     font-family: 'Tilt Neon', sans-serif;
- */    background-color: white;
+    background-color: white;
+}
+
+.siteLayout {
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 .icon {
@@ -47,10 +51,19 @@ body {
 
 .title {
     color: $blue;
+    font-size: 96px;
+    text-align: left;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: bold;
+}
+
+.subTitle {
+
 }
 
 .descriptionText {
     color: $blue;
+    font-size: 23px;
 }
 
 .text {
@@ -121,7 +134,9 @@ body {
 /* ==================== RESPONSIVNESS ==================== */
 
 @media(max-width: 1080px) {
-
+  .title {
+    font-size: 80px;
+  }
 }
 
 @media(max-width: 720px) {
@@ -133,29 +148,39 @@ body {
   }
 
     .title {
+      font-size: 70px;
     }
-    
+
     .descriptionText {
+      font-size: 20px;
     }
-    
+
     .text {
     }
 }
 
 @media(max-width: 480px) {
+  .siteLayout {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
   .button {
     min-width: 100px;
     height: 45px;
   }
 
-    .title {
-    }
+  .title {
+    font-size: 60px;
+  }
     
-    .descriptionText {
-    }
+  .descriptionText {
+    font-size: 18px;
+  }
     
     .text {
     }
+
 }
 
 @media(max-width: 360px) {
@@ -163,9 +188,11 @@ body {
     }
 
     .title {
+      font-size: 50px;
     }
     
     .descriptionText {
+      font-size: 16px;
     }
     
     .text {
@@ -173,8 +200,9 @@ body {
 }
 
 @media(max-width: 300px) {
-    .title {
-    }
+  .title {
+    font-size: 40px;
+  }
     
     .descriptionText {
     }

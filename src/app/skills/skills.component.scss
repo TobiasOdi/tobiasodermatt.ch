@@ -7,17 +7,12 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
-    padding-left: 2rem;
-    padding-right: 2rem;
     background: linear-gradient(128.94deg, $light-blue -33.96%, $blue 112.25%)
     /* background: linear-gradient(128.94deg, #5988FF -33.96%, $light-blue 36.71%, $blue 112.25%); */    
     /* background: linear-gradient(128.94deg, #5988FF -33.96%, #5988FF 36.71%, #0043F0 112.25%); */
 }
 
 .skillsTitle {
-    font-size: 96px;
-    font-family: 'Baloo 2', sans-serif;
-    font-weight: bold;
     color: white;
 }
 
@@ -30,9 +25,7 @@
 
     div {
         text-align: center;
-        font-size: 23px;
         color: white;
-        cursor: pointer;
     }
 }
 
@@ -87,44 +80,11 @@
 }
 
 @media (max-width: 480px) {
-    .skillsContainer {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
     .firstRow, 
     .secondRow {
-        > img {
+        > div > img {
             width: 50px;
             height: auto;
-        }
-    }
-
-    .skillsTitle {
-        font-size: 80px;
-    }
-    .skillsDescription {
-        div {
-            font-size: 18px;
-        }
-    }
-}
-
-@media (max-width: 360px) {
-    .firstRow, 
-    .secondRow {
-        > img {
-            width: 40px;
-            height: auto;
-        }
-    }
-
-    .skillsTitle {
-        font-size: 60px;
-    }
-    .skillsDescription {
-        div {
-            font-size: 16px;
         }
     }
 }
