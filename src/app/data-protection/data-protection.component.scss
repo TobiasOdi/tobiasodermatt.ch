@@ -1,9 +1,24 @@
 .dataProtectionContent {
     height: 100%;
     overflow: auto;
+    hyphens: auto;
 }
 
 /* ================== RESPONSIVENESS ==================== */
+@media(max-width: 480px) {
+    .dataProtectionContent h1 {
+        font-size: 25px;
+    }
+
+    .dataProtectionContent h2 {
+        font-size: 20px;
+    }
+
+    .dataProtectionContent h3 {
+        font-size: 18px;
+    }
+}
+
 @media(max-width: 320px) {
     .dataProtectionContent p {
         font-size: 14px;

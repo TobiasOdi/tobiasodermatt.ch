@@ -116,7 +116,7 @@ footer {
 }
 
 .imprint {
-    height: 80%;
+    height: calc(100% - 90px);
     width: 100%;
 }
 
@@ -126,7 +126,7 @@ footer {
 }
 
 .buttonContainer {
-    height: 20%;
+    height: 90px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -144,15 +144,15 @@ footer {
         height: 90vh;
         width: 90vw;
     }
-    
     .imprint {
-        height: 85%;
+        height: calc(100% - 82px);
     }
-    
+
     .buttonContainer {
-        height: 15%;
-    }
+        height: 82px;
+    }    
 }
+
 
 @media(max-width: 600px) {
     footer {
@@ -175,10 +175,7 @@ footer {
 @media(max-width: 480px) {
     .imprintSubContainer {
         padding: 1rem;
-    }
-
-    .buttonContainer {
-        padding: 1rem;
+        padding-bottom: 0;
     }
 }
 
