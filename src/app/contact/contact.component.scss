@@ -256,6 +256,19 @@
     z-index: 10;
 }
 
+.contactForm input:disabled,
+.contactForm textarea:disabled,
+.contactForm button:disabled {
+    border: 1px solid gray;
+    color: gray;
+    background-color: lightgray;
+
+}
+
+.contactForm button:disabled:hover {
+    background: none;
+}
+
 .upButton {
     width: 100%;
     display: flex;

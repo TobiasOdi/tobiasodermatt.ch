@@ -19,10 +19,10 @@
                 <div translate>Brauchen Sie einen Frontend-Entwickler? Kontaktieren Sie mich!</div>
             </div>
             <div>
-                <form #contactForm class="contactForm" (submit)="sendMail()" ngNativeValidate>
+                <form #contactForm [formGroup]="profileForm" class="contactForm" (ngSubmit)="sendMail()" ngNativeValidate>
                     <div class="inputContainer">
                         <div class="inputSubContainer">
-                            <input ng-model="nameField.valid" type="text" name="name" #nameField required>
+                            <input type="text" name="name" formControlName="name" #nameField required>
                             <div class="labelLine" translate>Name</div>
                             <div class="validationImages">
                                 <img class="validImg" src="../../assets/img/icons/valid.png">
@@ -36,7 +36,7 @@
     
                     <div class="inputContainer">
                         <div class="inputSubContainer">
-                            <input type="email" name="email" #emailField required>
+                            <input type="email" name="email" formControlName="email" #emailField required>
                             <div class="labelLine" translate>E-Mail</div>
                             <div class="validationImages">
                                 <img class="validImg" src="../../assets/img/icons/valid.png">
@@ -50,7 +50,7 @@
     
                     <div class="inputContainer">
                         <div class="inputSubContainer">
-                            <textarea type="textarea" name="message" #messageField required></textarea>
+                            <textarea type="textarea" name="message" formControlName="message" #messageField required></textarea>
                             <div class="labelLine" translate>Nachricht</div>
                             <div class="validationImages">
                                 <img class="validImg" src="../../assets/img/icons/valid.png">
@@ -65,7 +65,7 @@
                     <div class="privacyPolicyConsent">
                         <div id="checkboxContainer" class="checkboxContainer" (click)="acceptPrivacyPolicy()">
                             <img id="checkboxTick" class="checkboxTick" [class.showTick]="privacyChecked" src="../../assets/img/icons/checkboxTick.svg">
-                            <input #privacyField class="inputCheckbox" type="checkbox" required>
+                            <input #privacyField class="inputCheckbox" formControlName="privacyPolicy" type="checkbox" required>
                             <div class="checkboxHoverContainer">
                             </div>
                         </div>
@@ -75,7 +75,7 @@
                             <span translate>gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.</span>
                         </div>
                     </div>
-                    <button type="submit" class="button" #submitButton translate>Nachricht senden</button>
+                    <button type="submit" [disabled]="!profileForm.valid" class="button" #submitButton translate>Nachricht senden</button>
                 </form>
             </div>
         </div>

@@ -1,11 +1,18 @@
-import { Component, ElementRef, Input, ViewChild } from '@angular/core';
-
+import { Component, OnInit, ElementRef, Input, ViewChild } from '@angular/core';
+import { FormControl, ReactiveFormsModule, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
+  profileForm = new FormGroup ({
+    name: new FormControl(''),
+    email: new FormControl(''),
+    message: new FormControl(''),
+    privacyPolicy: new FormControl('')
+  });
+  
   @Input() checkPrivacyPolicy = false;
   @Input() show = false;
   @Input() privacyChecked = false;
@@ -16,7 +23,6 @@ export class ContactComponent {
   @ViewChild('privacyField') privacyField!: ElementRef;
   @ViewChild('submitButton') submitButton!: ElementRef;
 
-  
   acceptPrivacyPolicy() {
     if(this.privacyChecked === false) {
       this.privacyChecked = true;
@@ -61,23 +67,8 @@ export class ContactComponent {
     emailField.value = "";
     messageField.value = "";
     privacyField.checked = false;
-
+    this.privacyChecked = false;
   }
-
-  checkInvalidText() {
-    let nameField = this.nameField.nativeElement;
-
-    nameField.addEventListener('focus', function(){
-      return true;
-    });
-
-/*     if(nameField.invalid && nameField.focus()) {
-      return true;
-    } else {
-      return false;
-    } */
-  } 
-
   
   showPrivacyPolicy() {
     if(this.checkPrivacyPolicy == false) {
