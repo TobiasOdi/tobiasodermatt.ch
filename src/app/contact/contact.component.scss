@@ -357,30 +357,23 @@
     width: auto;
     margin-left: 5px;
     margin-right: 5px;
-}
+    line-height: 0.7;
 
-.privacyPolicyConsent > div:last-of-type a:hover {
-    font-weight: bold;
-    text-decoration: underline;
-    text-underline-offset: 3px;
+    &:hover {
+        font-weight: bold;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
 }
 
 .privacyPolicyConsent > div:last-of-type a::after {
     display: block;
-    content: normal;
     height: 0;
     visibility: hidden;
     overflow: hidden;
     font-weight: bold;
+    content: 'Datenschutzerklärung';
 }
-
-
-
-
-
-
-
-
 
 /* ================== RESPONSIVENESS ============== */
 @media (max-width: 720px) {

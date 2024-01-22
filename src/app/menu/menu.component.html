@@ -33,20 +33,28 @@
     
         <div [class.darkLinks]="darkMode" class="desktopMenuRightSide">      
             <!-- => Element erhält die Klasse darkLinks nur wenn die Variable darkMode 'true' ist -->
-            <div (click)="activeTab('aboutMe')">
-                <a [class.selectedTab]="aboutMe" href="#aboutMe" translate>Über mich</a>
+            <div (click)="activeTab('aboutMe')" class="ankerContainer">
+                <div class="ankerSubContainer">
+                    <a [class.selectedTab]="aboutMe" href="#aboutMe" translate>Über mich</a>
+                </div>
                 <div [class.blueLineMenu]="aboutMe"></div>
             </div>
             <div (click)="activeTab('skillSet')">
-                <a [class.selectedTab]="skillSet" href="#skills" translate>Skills</a>
+                <div class="ankerSubContainer">
+                    <a [class.selectedTab]="skillSet" href="#skills" translate>Skills</a>
+                </div>
                 <div [class.blueLineMenu]="skillSet"></div>
             </div>
             <div (click)="activeTab('portfolio')">
-                <a [class.selectedTab]="portfolio" href="#portfolio">Portfolio</a>   
+                <div class="ankerSubContainer">
+                    <a [class.selectedTab]="portfolio" href="#portfolio">Portfolio</a>
+                </div>
                 <div [class.blueLineMenu]="portfolio"></div>
             </div>
             <div (click)="activeTab('contact')">
-                <a [class.selectedTab]="contact" href="#contact" translate>Kontakt</a>   
+                <div class="ankerSubContainer">
+                    <a [class.selectedTab]="contact" href="#contact" translate>Kontakt</a>
+                </div>
                 <div [class.blueLineMenu]="contact"></div>
             </div>
         </div>

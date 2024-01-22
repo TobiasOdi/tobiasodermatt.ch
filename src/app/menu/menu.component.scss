@@ -4,41 +4,98 @@ header {
     height: 80px;
     z-index: 1;
 
-.desktopMenu {
-    height: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    > .desktopMenuLeftSide {
+    .desktopMenu {
+        height: inherit;
         display: flex;
-        justify-content: flex-start;
         align-items: center;
-        gap: 1rem;
+        justify-content: space-between;
 
-        > .slides {            
+        > .desktopMenuLeftSide {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
+            gap: 1rem;
+
+            > .slides {            
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            img {
+                height: 40px;
+                cursor: pointer;
+            }
         }
 
-        img {
-            height: 40px;
-            cursor: pointer;
+        > .desktopMenuRightSide{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: inherit;
+            gap: 1rem;
         }
     }
+}
 
-    > .desktopMenuRightSide{
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 15px;
+.ankerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-right: 6px;
+}
 
-        > div {
-            width: fit-content;
+.ankerSubContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    > a {
+        display: inline-block;
+        font-weight: 400;
+        color: $blue;
+        text-decoration: none;
+        font-size: 23px;
+        transition: font-weight 300ms ease;
+        white-space: nowrap;
+
+        &:hover {
+            font-weight: bold;
+            transition: font-weight 300ms ease;
+            text-shadow: 1px 0 0 transparent;
         }
 
-/*         > div:first-of-type {
+        &::after {
+            display: block;
+            height: 0;
+            visibility: hidden;
+            overflow: hidden;
+            font-weight: bold;
+            font-size: 23px;        
+        }
+    }
+}
+
+.desktopMenuRightSide > div:first-of-type > .ankerSubContainer a::after {
+    content: "Über mich";
+}
+
+.desktopMenuRightSide > div:nth-of-type(2) > .ankerSubContainer a::after  {
+    content: "Skills";
+}
+
+.desktopMenuRightSide > div:nth-of-type(3) > .ankerSubContainer a::after  {
+    content: "Portfolio";
+}
+
+.desktopMenuRightSide > div:last-of-type > .ankerSubContainer a::after  {
+    content: "Kontakt";
+}
+
+
+
+/*      > div:first-of-type {
             width: 130px;
         }
 
@@ -54,30 +111,6 @@ header {
             width: 100px;
         } */
 
-        a {
-            text-align: right;
-            font-weight: 400;
-            color: $blue;
-            /* color: #5988FF; */
-            text-decoration: none;
-            font-size: 23px;
-            transition: font-weight 300ms ease;
-    
-            &:hover {
-                font-weight: bold;
-                transition: font-weight 300ms ease;
-            }
-
-            &::after {
-                content: attr(data-text);
-                height: 0;
-                visibility: hidden;
-                overflow: hidden;
-                font-weight: bold;
-            }
-        }
-    }
-}
 
 .mobileMenu {
     height: inherit;
@@ -90,38 +123,37 @@ header {
         height: 30px;
         cursor: pointer;
     }
+}
 
     /* ====================== BURGER ICON ====================== */
-    .menuIcon {
-        height: 26px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;  
-        justify-content: space-around;
-        cursor: pointer;
+.menuIcon {
+    height: 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: space-around;
+    cursor: pointer;
 
-        > div {
-            display: block;
-            background-color: $blue;
-            /* background-color: #5988FF; */            
-            height: 2px;
-            width: 28px;
-            transition: 0.3s;
-        }
+    > div {
+        display: block;
+        background-color: $blue;
+        /* background-color: #5988FF; */            
+        height: 2px;
+        width: 28px;
+        transition: 0.3s;
     }
+}
 
-    .move .line1 {
-        transform: rotate(-45deg) translate(-6px, 6.5px);
-    }
-    .move .line2 {
-        opacity: 0;
-    }
-    .move .line3 {
-        transform: rotate(45deg) translate(-6px, -6px);
-    }
-    /* ======================================================= */
+.move .line1 {
+    transform: rotate(-45deg) translate(-6px, 6.5px);
 }
+.move .line2 {
+    opacity: 0;
 }
+.move .line3 {
+    transform: rotate(45deg) translate(-6px, -6px);
+}
+/* ======================================================= */
 
 .mobileMenuOpen {
     position: absolute;
