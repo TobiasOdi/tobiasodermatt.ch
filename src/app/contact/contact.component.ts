@@ -45,6 +45,7 @@ export class ContactComponent {
 
     let formData = new FormData(); 
     formData.append('name', nameField.value);
+    formData.append('email', emailField.value);
     formData.append('message', messageField.value);
 
     // Sendeanimation

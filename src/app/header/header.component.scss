@@ -49,7 +49,7 @@
 
 
 .greeting > div:first-of-type {
-    font-size: 64px;
+    font-size: 45px;
     text-align: left;
     color: $blue;
     /* color: $portfolio-main-blue; */    
@@ -159,7 +159,7 @@
 /* ================= RESPONSIVENESS ================= */
 @media (max-width: 1130px) {
     .greeting > div:first-of-type {
-        font-size: 60px;
+        font-size: 40px;
     }
     
     .greeting > div:last-of-type  {
@@ -171,7 +171,7 @@
 
 @media (max-width: 1020px) {
     .greeting > div:first-of-type {
-        font-size: 55px;
+        font-size: 35px;
     }
 
     .greeting > div:last-of-type  {
@@ -182,10 +182,6 @@
 }
 
 @media (max-width: 920px) {
-    .greeting > div:first-of-type {
-        font-size: 50px;
-    }
-
     .greeting > div:last-of-type  {
         > div {
             font-size: 75px;
@@ -217,7 +213,7 @@
     }
 
     .greeting > div:first-of-type {
-        font-size: 60px;
+        font-size: 40px;
     }
 
     .greeting > div:last-of-type  {
@@ -229,7 +225,7 @@
 
 @media (max-width: 550px) {
     .greeting > div:first-of-type {
-        font-size: 50px;
+        font-size: 35px;
     }
 
     .greeting > div:last-of-type  {
@@ -241,7 +237,7 @@
 
 @media (max-width: 480px) {
     .greeting > div:first-of-type {
-        font-size: 35px;
+        font-size: 25px;
     }
     .greeting > div:last-of-type  {
         > div {
@@ -251,10 +247,6 @@
 }
 
 @media (max-width: 360px) {
-    .greeting > div:first-of-type {
-        font-size: 30px;
-    }
-
     .greeting > div:last-of-type  {
         > div {
             font-size: 45px;
@@ -264,7 +256,7 @@
 
 @media (max-width: 300px) {
     .greeting > div:first-of-type {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .greeting > div:last-of-type  {

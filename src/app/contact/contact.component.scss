@@ -89,6 +89,10 @@
         color: $blue;
         /* color: #5988FF; */
     }
+
+    > div:last-of-type > div:first-of-type >  div:last-of-type {
+        color: $light-blue;
+    }
 }
 
 .contactForm {

@@ -44,15 +44,6 @@
         text-decoration: none;
     }
 
-    > div:last-of-type {
-        padding-left: 4rem;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-end;
-        gap: 20px;
-    }
-
     > div:first-of-type {
         position: relative;
         display: flex;
@@ -72,6 +63,28 @@
             box-shadow: 4px 4px 10px 2px lightgrey;
         }
     }
+
+    > div:last-of-type {
+        padding-left: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+}
+
+.projectButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.liveTest {
+    background-color: $light-blue;
+    color: white;
+    display: none;
 }
 
 .projects > div:nth-of-type(even) {
@@ -188,6 +201,10 @@
         }
     }
 
+    .liveTest {
+        display: block;
+    }
+
     .projectTitle,
     .usedSkills,
     .projectDescription {
@@ -225,5 +242,13 @@
 
     .usedSkills {
         font-size: 18px;
+    }
+
+    .projectButtonContainer {
+        flex-direction: column;
+
+        > a {
+            width: 136px;
+        }
     }
 }
