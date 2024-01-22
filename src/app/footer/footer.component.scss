@@ -39,9 +39,8 @@ footer {
     align-items: center;
 }
 
-.footerLogo > img{
-    height: 40px;
-    width: auto;
+.footerLogo > .logoName > div:last-of-type {
+    color: white;
 }
 
 .footerRowOne > div:nth-of-type(2),

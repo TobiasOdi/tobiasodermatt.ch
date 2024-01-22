@@ -1,12 +1,16 @@
+/* ================================================================ VARIABLES ====================================================== */
+/* From Template */
 $portfolio-bright-blue: #0043F0;
 $portfolio-main-blue: #5988FF;
 $portfolio-very-light-blue: #EAF0FF;
 
+/* Custom colors */
 $dark-blue: #090B1B;
 $blue: #191B3C;
 $light-blue: #475FBC;
 $very-light-blue: #676eac;
 
+/* ================================================================ GENERAL ====================================================== */
 * {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
@@ -49,16 +53,13 @@ body {
     }
 }
 
+/* =========================================================== TITLES/TEXTS ================================================= */
 .title {
     color: $blue;
     font-size: 96px;
     text-align: left;
     font-family: 'Baloo 2', sans-serif;
     font-weight: bold;
-}
-
-.subTitle {
-
 }
 
 .descriptionText {
@@ -70,7 +71,30 @@ body {
     color: $blue;
 }
 
-/* ================================================================ SCROLLBAR ====================================================== */
+/* ================================================================ LOGO ====================================================== */
+.logoName {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 97px;
+
+  > div {
+      width: 100%;
+      font-weight: bold;
+      font-size: 16px;
+  }
+
+  > div:first-of-type {
+      color: #FFCD05;
+  }
+
+  > div:last-of-type {
+      color: $blue;
+  }
+}
+
+/* ========================================================== SCROLLBAR =================================================== */
 /* 
   Container Class: 
     -   height: calc(100vh - 89px); => absolute height
@@ -131,8 +155,7 @@ body {
   background-size: 10px 4px;
 } */
 
-/* ==================== RESPONSIVNESS ==================== */
-
+/* ====================================================== RESPONSIVNESS ================================================ */
 @media(max-width: 1080px) {
   .title {
     font-size: 80px;

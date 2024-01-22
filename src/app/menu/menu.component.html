@@ -1,8 +1,12 @@
 <header class="siteLayout" [class.headerDark]="darkMode" id="header">
     <div class="desktopMenu">
         <div class="desktopMenuLeftSide">
-            <img routerLink="/" src="../../assets/img/Tobias Logo 5.png">
+            <div class="logoName">
+                <div>TOBIAS</div>
+                <div>ODERMATT</div>
+            </div>
 
+            
             <!-- =========== DARK MODE =========== -->
     <!--         <img routerLink="/" src="../../assets/img/icons/logo.png"> -->
             <!-- *ngIf="!darkMode"
@@ -19,6 +23,8 @@
         
                     </span>
                 </div> -->
+            <!-- =========== DARK MODE =========== -->
+
                 <label class="switch">
                     <input (click)="setLangValue()" type="checkbox" id="checkboxOne" [checked]="languageChange">
                     <span class="slider round">
@@ -61,7 +67,10 @@
     </div>
 
     <div class="mobileMenu">
-        <img routerLink="/" src="../../assets/img/Tobias Logo.png">
+        <div routerLink="/" class="logoName">
+            <div>TOBIAS</div>
+            <div>ODERMATT</div>
+        </div>
 
         <div id="menuIcon" class="menuIcon" (click)="openMobileMenu()" [class.move]="mobileMenuOpenCheck">
 <!--             <img src="../../assets/img/icons/burger menu.png" class="burgerMenu"> -->
