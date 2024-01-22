@@ -169,6 +169,11 @@ footer {
     .footerRowOne > div {
         width: auto;
     }
+
+    .logoName {
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 @media(max-width: 480px) {
