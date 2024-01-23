@@ -5,8 +5,14 @@
     <div class="descriptionText" translate>
         Dies ist eine Sammlung meiner bisherigen Projekte, welche gerne ausprobiert werden können.
     </div>
+    <div class="filter">
+        <img src="../../assets/img/icons/filter.svg">
+        <div class="button" (click)="filterAll()" translate>Alle</div>
+        <div class="button" (click)="filterAngular()">Angular</div>
+        <div class="button" (click)="filterJavaScript()">JavaScript</div>
+    </div>
     <div class="projects">
-        <div class="project">
+        <div *ngIf="angularProject" class="project">
             <div>
                 <img src="../../assets/img/project4.png">
                 <div class="overlay">
@@ -29,7 +35,7 @@
                 </div>
             </div>
         </div>
-        <div class="project">
+        <div *ngIf="javaScriptProject" class="project">
             <div>
                 <img src="../../assets/img/project1_join1.png">
                 <div class="overlay">
@@ -53,7 +59,7 @@
                 </div>
             </div>
         </div>
-        <div class="project">
+        <div *ngIf="javaScriptProject" class="project">
             <div>
                 <img src="../../assets/img/project2_elpolloloco.png">
                 <div class="overlay">
@@ -77,7 +83,7 @@
                 </div>
             </div>
         </div>        
-        <div class="project">
+        <div *ngIf="javaScriptProject" class="project">
             <div>
                 <img src="../../assets/img/project3_pokedex1.png">
                 <div class="overlay">

@@ -13,6 +13,20 @@
     }
 }
 
+.filter {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    > img {
+        height: 50px;
+        width: auto;
+    }
+}
+
 .projects {
     width: 100%;
     display: flex;

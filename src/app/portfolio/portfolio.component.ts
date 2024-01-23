@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio',
@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
+@Input() javaScriptProject = true;
+@Input() angularProject = true;
 
+  filterJavaScript() {
+    this.angularProject = false;
+    this.javaScriptProject = true;
+  }
+
+  filterAngular() {
+    this.javaScriptProject = false;
+    this.angularProject = true;
+  }
+
+  filterAll() {
+    this.javaScriptProject = true;
+    this.angularProject = true;
+  }
 }
