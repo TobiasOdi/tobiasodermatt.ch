@@ -177,9 +177,6 @@ body {
     .descriptionText {
       font-size: 20px;
     }
-
-    .text {
-    }
 }
 
 @media(max-width: 480px) {
@@ -191,6 +188,7 @@ body {
   .button {
     min-width: 100px;
     height: 45px;
+    padding: 10px 10px 10px 10px;
   }
 
   .title {
@@ -200,14 +198,11 @@ body {
   .descriptionText {
     font-size: 18px;
   }
-    
-    .text {
-    }
-
 }
 
 @media(max-width: 360px) {
     .button {
+      font-size: 18px;
     }
 
     .title {
@@ -217,20 +212,11 @@ body {
     .descriptionText {
       font-size: 16px;
     }
-    
-    .text {
-    }
 }
 
 @media(max-width: 300px) {
   .title {
     font-size: 40px;
   }
-    
-    .descriptionText {
-    }
-    
-    .text {
-    }
 }
 
