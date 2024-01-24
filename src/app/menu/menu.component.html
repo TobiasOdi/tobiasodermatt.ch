@@ -1,4 +1,4 @@
-<header class="siteLayout" [class.headerDark]="darkMode" id="header">
+<header class="siteLayout" id="header">
     <div class="desktopMenu">
         <div class="desktopMenuLeftSide">
             <div class="logoName">
@@ -7,7 +7,9 @@
             </div>
             
             <!-- =========== DARK MODE =========== -->
-            <!--<img routerLink="/" src="../../assets/img/icons/logo.png"> -->
+            <!--[class.headerDark]="darkMode" => Element erhält die Klasse headerDark nur wenn die Variable darkMode 'true' ist
+                [class.darkLinks]="darkMode" => Element erhält die Klasse darkLinks nur wenn die Variable darkMode 'true' ist
+                <img routerLink="/" src="../../assets/img/icons/logo.png"> -->
             <!-- *ngIf="!darkMode" // *ngIf="darkMode" -->
 
             <div class="switchContainer">
@@ -23,8 +25,7 @@
             </div>
         </div>
     
-        <div [class.darkLinks]="darkMode" class="desktopMenuRightSide">      
-            <!-- => Element erhält die Klasse darkLinks nur wenn die Variable darkMode 'true' ist -->
+        <div  class="desktopMenuRightSide">      
             <div (click)="activeTab('aboutMe')" class="ankerContainer">
                 <div class="ankerSubContainer">
                     <a [class.selectedTab]="aboutMe" href="#aboutMe" translate>Über mich</a>
