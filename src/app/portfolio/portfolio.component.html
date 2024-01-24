@@ -7,9 +7,15 @@
     </div>
     <div class="filter">
         <img src="../../assets/img/icons/filter.svg">
-        <div class="button" (click)="filterAll()" translate>Alle</div>
-        <div class="button" (click)="filterAngular()">Angular</div>
-        <div class="button" (click)="filterJavaScript()">JavaScript</div>
+        <div [class.activeFilter]="javaScriptProject && angularProject" class="button" (click)="filterAll()">
+            <div translate>Alle</div>
+        </div>
+        <div [class.activeFilter]="angularProject && !javaScriptProject" class="button" (click)="filterAngular()">
+            <div>Angular</div>
+        </div>
+        <div [class.activeFilter]="javaScriptProject &&!angularProject" class="button" (click)="filterJavaScript()">
+            <div>JavaScript</div>
+        </div>
     </div>
     <div class="projects">
         <div *ngIf="angularProject" class="project">

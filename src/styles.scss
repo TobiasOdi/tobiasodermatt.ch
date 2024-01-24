@@ -37,7 +37,6 @@ body {
     border-radius: 10px;
     border: 2px solid $blue;
     color: $blue;
-    /* color: #5988FF; */    
     padding: 15px 30px 15px 30px;
     cursor: pointer;
     font-size: 23px;
@@ -48,7 +47,6 @@ body {
 
     &.button:hover {
         background: linear-gradient(128.94deg, #5988FF -33.96%, $blue 112.25%);
-        /* background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%); */        
         color: white;
         transition: all 300ms ease;
     }
@@ -108,12 +106,19 @@ body {
     -  overflow: auto;
 */
 
+::-webkit-scrollbar,
 .imprintContent::-webkit-scrollbar,
 .dataProtectionContent::-webkit-scrollbar   {
   width: 10px;
   scrollbar-gutter: stable;
+  background: transparent;
 }
 
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb,
 .imprintContent::-webkit-scrollbar-thumb,
 .dataProtectionContent::-webkit-scrollbar-thumb {
   background-color: #a8a8a8;
@@ -121,11 +126,13 @@ body {
   border-radius: 6px;
 }
 
+::-webkit-scrollbar-button,
 .imprintContent::-webkit-scrollbar-button,
 .dataProtectionContent::-webkit-scrollbar-button {
   color: #a8a8a8;
 }
 
+::-webkit-scrollbar-button,
 .imprintContent::-webkit-scrollbar-button,
 .dataProtectionContent::-webkit-scrollbar-button {
   display: block;
@@ -139,12 +146,13 @@ body {
   background-image: url(../img/upArrow.svg);
   background-size: 10px 4px;
 } */
-
+::-webkit-scrollbar-button:vertical:start:decrement,
 .imprintContent::-webkit-scrollbar-button:vertical:start:decrement,
 .dataProtectionContent::-webkit-scrollbar-button:vertical:start:decrement  {
   display: none;
 }
 
+::-webkit-scrollbar-button:vertical:end:increment,
 .imprintContent::-webkit-scrollbar-button:vertical:end:increment,
 .dataProtectionContent::-webkit-scrollbar-button:vertical:end:increment {
   display: none;

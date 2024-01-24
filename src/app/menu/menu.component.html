@@ -5,26 +5,12 @@
                 <div>TOBIAS</div>
                 <div>ODERMATT</div>
             </div>
-
             
             <!-- =========== DARK MODE =========== -->
-    <!--         <img routerLink="/" src="../../assets/img/icons/logo.png"> -->
-            <!-- *ngIf="!darkMode"
-                *ngIf="darkMode" -->
+            <!--<img routerLink="/" src="../../assets/img/icons/logo.png"> -->
+            <!-- *ngIf="!darkMode" // *ngIf="darkMode" -->
 
-            <div class="slides">
- <!--           <div class="switch">
-                    <input type="checkbox">
-                    <span class="slider round">
-                        <div class="mode">
-                            <img src="../../assets/img/icons/sun.svg">
-                            <img src="../../assets/img/icons/moon.svg">
-                        </div>
-        
-                    </span>
-                </div> -->
-            <!-- =========== DARK MODE =========== -->
-
+            <div class="switchContainer">
                 <label class="switch">
                     <input (click)="setLangValue()" type="checkbox" id="checkboxOne" [checked]="languageChange">
                     <span class="slider round">

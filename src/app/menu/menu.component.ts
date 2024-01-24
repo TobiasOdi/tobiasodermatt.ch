@@ -8,7 +8,7 @@ import {TranslateService} from '@ngx-translate/core';
 })
 
 export class MenuComponent {
-  @Input() darkMode = false;
+  //@Input() darkMode = false;
   languageChange:boolean = false;
   @Input() aboutMe = true;
   @Input() skillSet = false;
@@ -68,7 +68,6 @@ export class MenuComponent {
     if(acitveTab == 'contact') {
       this.contact = true;
     }
-
     this.mobileMenuOpenCheck = false;
   }
 

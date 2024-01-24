@@ -97,7 +97,6 @@
     }
 }
 
-
 /* === GIT BTN === */
 .defGitBtn {
     background: url(../../assets/img/icons/Github_button.png) no-repeat;
@@ -107,16 +106,6 @@
     justify-content: flex-start;
     transition: 0.3s ease;
 }
-
-/* .icons > a:first-of-type:hover > div {
-    background-color: white;
-    border-radius: 50%;
-} */
-
-
-/* .icons > a:first-of-type:hover .defGitBtn {
-    background: url(../../assets/img/icons/hovGitBtn1.svg) no-repeat;
-}  */
 
 /* === LINK BTN === */
 .defLinkBtn {
@@ -128,15 +117,6 @@
     transition: 0.3s ease;
 }
 
-/* .icons > a:nth-of-type(2):hover > div {
-    background-color: white;
-    border-radius: 50%;
-}
-
-.icons > a:nth-of-type(2):hover .defLinkBtn {
-    background: url(../../assets/img/icons/hovLinkBtn1.svg) no-repeat;
-} */
-
 /* === MAIL BTN === */
 .defMailBtn {
     background: url(../../assets/img/icons/Email_button.png) no-repeat;
@@ -146,15 +126,6 @@
     justify-content: flex-start;
     transition: 0.3s ease;
 }
-
-/* .icons > a:last-of-type:hover > div {
-    background-color: white;
-    border-radius: 50%;
-}
-
-.icons > a:last-of-type:hover .defMailBtn {
-    background: url(../../assets/img/icons/hovMailBtn1.svg) no-repeat;
-} */
 
 /* ================= RESPONSIVENESS ================= */
 @media (max-width: 1130px) {

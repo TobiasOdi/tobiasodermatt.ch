@@ -146,7 +146,6 @@
 .inputSubContainer > textarea {
     position: absolute;
     border: 1px solid $blue;
-    /* border: 1px solid #5988FF; */
     background: transparent;
     outline: none;
     padding: 0 20px;
@@ -322,7 +321,6 @@
     align-items: center;
     cursor: pointer;
     border: 2px solid $blue;
-    /* border: 2px solid #5988FF;*/
     border-radius: 3px;
 }
 
@@ -357,7 +355,6 @@
     cursor: pointer;
     text-decoration: none;
     color: $light-blue;
-    /* color: #5988FF; */
     display: inline-block;
     width: auto;
     margin-left: 5px;
@@ -429,11 +426,9 @@
 }
 
 @media (max-width: 480px) {
-    @media(max-width: 480px) {
-        .privacyPolicySubContainer {
-            padding: 1rem;
-            padding-bottom: 0;
-        }
+    .privacyPolicySubContainer {
+        padding: 1rem;
+        padding-bottom: 0;
     }
 
     .contactSubContainer > div:last-of-type > div:first-of-type > div:first-of-type {

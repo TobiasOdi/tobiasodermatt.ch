@@ -22,8 +22,27 @@
     margin-bottom: 2rem;
 
     > img {
-        height: 50px;
+        height: 40px;
         width: auto;
+    }
+
+    > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: 95px;
+        min-width: 0;
+        padding: 5px;
+        font-size: 16px;
+    }
+}
+
+.activeFilter {
+    background: linear-gradient(128.94deg, #5988FF -33.96%, $blue 112.25%);
+    color: white;
+    &hover {
+        background: radial-gradient(none);
     }
 }
 
@@ -124,7 +143,6 @@
 .projectTitle {
     font-size: 45px;
     color: $blue;
-    /* color: #5988FF; */
     font-family: 'Baloo 2', sans-serif;
     font-weight: bold;
     line-height: 1;
@@ -237,6 +255,18 @@
             height: auto;
         }
     }
+
+    .filter {
+        > img {
+            height: 35px;
+        }
+    
+        > div {
+            width: 85px;
+            height: 35px;
+            font-size: 14px;
+        }
+    }
 }
 
 @media (max-width: 480px) {
@@ -249,7 +279,19 @@
     }
 }
 
+@media (max-width: 390px) {
+    .filter {
+        gap: 0.5rem;
+        flex-direction: column;
+
+        > div {
+            width: 150px;
+        }
+    }
+}
+
 @media (max-width: 360px) {
+   
     .projectTitle {
         font-size: 25px;
     }

@@ -10,9 +10,6 @@
     background: linear-gradient(128.94deg, $light-blue -33.96%, $blue 112.25%);
     padding-top: 3rem;
     padding-bottom: 3rem;
-
-    /* background: linear-gradient(128.94deg, #5988FF -33.96%, $light-blue 36.71%, $blue 112.25%); */    
-    /* background: linear-gradient(128.94deg, #5988FF -33.96%, #5988FF 36.71%, #0043F0 112.25%); */
 }
 
 .skillsTitle {
@@ -37,20 +34,12 @@
     padding-bottom: 2rem;
 }
 
-.firstRow
-/* .secondRow  */ {
+.firstRow {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(5, minmax(90px,1fr));
     grid-template-rows: repeat(2);
-
-
-/*     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 5rem;
-    padding-right: 5rem;
- */}
+}
 
  .firstRow > div {
     display: flex;
@@ -60,7 +49,6 @@
 
 
 /* ================== RESPONSIVENESS ================== */
-
 @media (max-width: 1000px) {
     .firstRow {
         padding-left: 2rem;
