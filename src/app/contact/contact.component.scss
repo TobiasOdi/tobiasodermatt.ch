@@ -377,6 +377,51 @@
     content: inherit;
 }
 
+.messageSentSnackbar {
+    z-index: 100;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: snackbarAnimation 300ms ease-in;
+
+    @keyframes snackbarAnimation {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+        height: 60px;
+        width: auto;
+        padding: 1rem;   
+        border-radius: 1rem;
+        background-color: $blue;
+        border: 1px solid $blue;
+    }
+}
+
+.messageSent {
+    color: white;
+    font-weight: bold;
+}
+
+
+
+
 /* ================== RESPONSIVENESS ============== */
 @media (max-width: 720px) {
     .privacyPolicySubContainer {

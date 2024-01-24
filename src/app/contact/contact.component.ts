@@ -14,7 +14,7 @@ export class ContactComponent {
   });
   
   @Input() checkPrivacyPolicy = false;
-  @Input() show = false;
+  @Input() showSnackbar: boolean = false;
   @Input() privacyChecked = false;
   @ViewChild('myForm') myForm!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
@@ -69,6 +69,12 @@ export class ContactComponent {
     messageField.value = "";
     privacyField.checked = false;
     this.privacyChecked = false;
+
+    this.showSnackbar = true;
+
+    setTimeout(() => {
+      this.showSnackbar = false;
+    }, 2500);
   }
   
   showPrivacyPolicy() {
