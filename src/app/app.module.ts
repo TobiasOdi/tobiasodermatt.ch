@@ -23,7 +23,6 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CookieBannerComponent } from './cookie-banner/cookie-banner.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +37,6 @@ import { CookieBannerComponent } from './cookie-banner/cookie-banner.component';
     PortfolioComponent,
     ContactComponent,
     FooterComponent,
-    CookieBannerComponent
   ],
   imports: [
     BrowserModule,
