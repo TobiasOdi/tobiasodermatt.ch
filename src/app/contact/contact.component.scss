@@ -164,7 +164,7 @@
 
     &::-webkit-resizer {
         display: none;
-}
+    }
 }
 
 .inputSubContainer > input,
@@ -441,9 +441,6 @@
     font-weight: bold;
 }
 
-
-
-
 /* ================== RESPONSIVENESS ============== */
 @media (max-width: 720px) {
     .privacyPolicySubContainer {
@@ -489,7 +486,6 @@
         padding-top: 0;
         padding-bottom: 0;
     }
-
 }
 
 @media (max-width: 480px) {

@@ -77,18 +77,20 @@ body {
   justify-content: flex-start;
   align-items: center;
   width: 97px;
+  cursor: pointer;
 
-  > div {
+  > a {
       width: 100%;
       font-weight: bold;
       font-size: 16px;
+      text-decoration: none;
   }
 
-  > div:first-of-type {
+  > a:first-of-type {
       color: #FFCD05;
   }
 
-  > div:last-of-type {
+  > a:last-of-type {
       color: $blue;
   }
 }

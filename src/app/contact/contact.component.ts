@@ -57,7 +57,6 @@ export class ContactComponent {
       }
     )
 
-    // Text anzeigen Nachricht gesendet
     nameField.disabled = false;
     emailField.disabled = false;
     messageField.disabled = false;
@@ -84,14 +83,4 @@ export class ContactComponent {
           this.checkPrivacyPolicy = false;
     }
   }
-
-/*   validateEmail() {
-    let emailField = this.emailField.nativeElement;
-
-    if(emailField.valid) {
-      emailField.style.classList.add('valid');
-    } else if(emailField.invalid) {
-      emailField.style.classList.add('invalid');
-    }
-  } */
 }

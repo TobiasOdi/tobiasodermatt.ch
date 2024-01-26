@@ -60,6 +60,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
 
     > div {
         position: relative;
@@ -85,7 +86,6 @@
         border-radius: 1rem;
         max-height: 500px;
 
-
         > img {
             height: 100%;
             width: 100%;
@@ -98,12 +98,12 @@
     }
 
     > div:last-of-type {
-        padding-left: 4rem;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-end;
-        gap: 20px;
+        gap: 1rem;
+        padding-left: 5px;
     }
 }
 
@@ -133,10 +133,10 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
-    padding-right: 4rem;
+    padding-right: 5px;
 }
 
-.projects > div:nth-of-type(even) > div:last-of-type > div:last-of-type {
+.projects > div:nth-of-type(even) > div:last-of-type > div {
     text-align: right;
 }
 
@@ -206,8 +206,18 @@
 
         > div {
             width: auto;
-            height: 400px;
+            max-height: 400px;
             border-radius: 20px;
+        }
+
+        > div:first-of-type {
+            max-height: 400px;
+            height: 100%;
+            width: auto;
+
+            > img {
+                max-height: 400px;
+            }
         }
 
         > div:last-of-type {
@@ -231,6 +241,10 @@
         > div:last-of-type {
             text-align: center;
         }
+    }
+
+    .projects > div:nth-of-type(even) > div:last-of-type > div {
+        text-align: center;
     }
 
     .liveTest {
