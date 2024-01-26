@@ -16,7 +16,7 @@ export class ContactComponent {
   @Input() checkPrivacyPolicy = false;
   @Input() showSnackbar: boolean = false;
   @Input() privacyChecked = false;
-  @ViewChild('myForm') myForm!: ElementRef;
+  @ViewChild('contactForm') contactForm!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
   @ViewChild('emailField') emailField!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
@@ -85,7 +85,7 @@ export class ContactComponent {
     }
   }
 
-  validateEmail() {
+/*   validateEmail() {
     let emailField = this.emailField.nativeElement;
 
     if(emailField.valid) {
@@ -93,5 +93,5 @@ export class ContactComponent {
     } else if(emailField.invalid) {
       emailField.style.classList.add('invalid');
     }
-  }
+  } */
 }

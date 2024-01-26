@@ -36,7 +36,7 @@
     
                     <div class="inputContainer">
                         <div class="inputSubContainer">
-                            <input type="email" name="email" formControlName="email" #emailField (keyup)="validateEmail()" required>
+                            <input type="email" name="email" formControlName="email" #emailField required>
                             <div class="labelLine" translate>E-Mail</div>
                             <div class="validationImages">
                                 <img class="validImg" src="../../assets/img/icons/valid.png">
@@ -63,10 +63,14 @@
                     </div>
                     
                     <div class="privacyPolicyConsent">
-                        <div id="checkboxContainer" class="checkboxContainer" (click)="acceptPrivacyPolicy()">
-                            <img id="checkboxTick" class="checkboxTick" [class.showTick]="privacyChecked" src="../../assets/img/icons/checkboxTick.svg">
-                            <input #privacyField class="inputCheckbox" formControlName="privacyPolicy" type="checkbox" required>
-                            <div class="checkboxHoverContainer">
+                        <div class="containerLeft">
+                            <div id="checkboxContainer" class="checkboxContainer">
+                                <div class="checkboxTickContainer" [class.showTick]="privacyChecked">
+                                    <img id="checkboxTick" class="checkboxTick" src="../../assets/img/icons/checkboxTick.svg">
+                                </div>
+                                <input (click)="acceptPrivacyPolicy()" #privacyField class="inputCheckbox" formControlName="privacyPolicy" type="checkbox" required>
+                                <div class="checkboxHoverContainer">
+                                </div>
                             </div>
                         </div>
                         <div>
