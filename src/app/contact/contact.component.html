@@ -82,6 +82,11 @@
                         </div>
                         <button type="submit" [disabled]="!profileForm.valid" class="button" #submitButton translate>Nachricht senden</button>
                     </form>
+                    <div *ngIf="showSnackbar" class="messageSentSnackbar">
+                        <div>
+                            <div class="messageSent" translate>Nachricht erfolgreich gesendet!</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -89,14 +94,6 @@
             <a href="#header">
                 <div class="defUpBtn"></div>
             </a>
-        </div>
-    
-        <!-- ================== SNACKBAR =============== -->
-        <div *ngIf="showSnackbar" class="messageSentSnackbar">
-            <div>
-                <div class="messageSent" translate>Nachricht gesendet</div>
-            </div>
-        </div>
-        
+        </div>       
     </div>    
 </div>

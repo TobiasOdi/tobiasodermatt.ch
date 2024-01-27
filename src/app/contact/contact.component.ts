@@ -73,7 +73,7 @@ export class ContactComponent {
 
     setTimeout(() => {
       this.showSnackbar = false;
-    }, 2500);
+    }, 3000);
   }
   
   showPrivacyPolicy() {

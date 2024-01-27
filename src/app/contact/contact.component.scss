@@ -87,6 +87,10 @@
         gap: 2rem;
     }
 
+    > div:last-of-type > div:last-of-type {
+        position: relative;
+    }
+
     > div:last-of-type > div:first-of-type >  div:first-of-type {
         font-size: 32px;
         font-family: 'Montserrat', sans-serif;
@@ -405,12 +409,11 @@
 }
 
 .messageSentSnackbar {
-    z-index: 100;
-    position: fixed;
-    bottom: 0;
+    position: absolute;
+    bottom: -2.5rem;
     left: 0;
     right: 0;
-    height: 120px;
+    z-index: 10;
     width: 100%;
     background-color: transparent;
     display: flex;
@@ -432,12 +435,17 @@
         display: flex;
         justify-content: center;
         align-items: center;    
-        height: 60px;
+        height: 30px;
         width: auto;
-        padding: 1rem;   
+        background-color: #90EE90;
+        padding: 10px;
         border-radius: 1rem;
-        background-color: $blue;
-        border: 1px solid $blue;
+
+        > div {
+            color: white;  
+            font-weight: normal;
+            font-size: 18px;
+        }
     }
 }
 
@@ -502,10 +510,22 @@
     .contactSubContainer > div:last-of-type > div:first-of-type > div:first-of-type {
         font-size: 20px;
     }
+
+    .messageSentSnackbar {
+        > div > div {
+            font-size: 16px;
+        }
+    }
 }
 
 @media (max-width: 360px) {
     .contactSubContainer > div:last-of-type > div:first-of-type > div:first-of-type {
         font-size: 18px;
+    }
+
+    .messageSentSnackbar {
+        > div > div {
+            font-size: 14px;
+        }
     }
 }
