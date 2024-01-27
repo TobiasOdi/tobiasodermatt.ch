@@ -262,14 +262,15 @@
 .inputSubContainer > input:focus:invalid ~ .validationImages > .errorImg,
 .inputSubContainer > textarea:focus:invalid ~ .validationImages > .errorImg,
 .inputSubContainer > input:focus:invalid ~ .inputNote,
-.inputSubContainer > textarea:focus:invalid ~ .inputNote {
+.inputSubContainer > textarea:focus:invalid ~ .inputNote,
+.contactForm > div:nth-of-type(2) input:invalid:not(:placeholder-shown) ~ .inputNote,
+.contactForm > div:nth-of-type(2) input:invalid:not(:placeholder-shown) ~ .validationImages > .errorImg {
     display: flex;
 }
 
 .inputSubContainer > input:focus:invalid + .labelLine,
 .inputSubContainer > textarea:focus:invalid + .labelLine,
-
-.inputSubContainer > input:nth-of-type(2):required:invalid + .labelLine {
+.contactForm > div:nth-of-type(2) input:invalid:not(:placeholder-shown) + .labelLine {
     color: red;
     height: 30px;
     line-height: 30px;
@@ -278,13 +279,21 @@
     z-index: 10;
 }
 
+.contactForm > div:nth-of-type(2) input::placeholder {
+    color: transparent;
+}
+
+.contactForm > div:nth-of-type(2) input:invalid:not(:placeholder-shown) {
+    color: red;
+    border: 2px  solid red;
+}
+
 .contactForm input:disabled,
 .contactForm textarea:disabled,
 .contactForm button:disabled {
     border: 1px solid gray;
     color: gray;
     background-color: lightgray;
-
 }
 
 .contactForm button:disabled:hover {
