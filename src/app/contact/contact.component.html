@@ -1,102 +1,102 @@
-<div class="contactContainer siteLayout" id="contact">
-    <div class="privacyPolicyContainer" *ngIf="checkPrivacyPolicy">
-        <div class="privacyPolicySubContainer">
-            <div class="privacyPolicy">
-                <app-data-protection></app-data-protection>
-            </div>  
-            <div class="buttonContainer">
-                <button (click)="showPrivacyPolicy()" class="button">Close</button>
+<div class="backgroundContact">
+    <div class="contactContainer siteLayout" id="contact">
+        <div class="privacyPolicyContainer" *ngIf="checkPrivacyPolicy">
+            <div class="privacyPolicySubContainer">
+                <div class="privacyPolicy">
+                    <app-data-protection></app-data-protection>
+                </div>  
+                <div class="buttonContainer">
+                    <button (click)="showPrivacyPolicy()" class="button">Close</button>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="contactSubContainer">
-        <div class="title" translate>Kontakt</div>
-        <div>
-            <div>
-                <div translate>Möchten Sie ein neues Projekt besprechen?</div>
-                <div translate>Gerne unterstützte ich Sie bei der Verwirklichung Ihrer Ideen. Kontaktieren Sie mich über dieses Formular.</div>
-                <div><span translate>Brauchen Sie einen Frontend-Entwickler? </span><b translate>Kontaktieren Sie mich!</b></div>
-            </div>
-            <div>
-                <form #contactForm [formGroup]="profileForm" class="contactForm" (ngSubmit)="sendMail()" ngNativeValidate>
-                    <div class="inputContainer">
-                        <div class="inputSubContainer">
-                            <input type="text" name="name" formControlName="name" #nameField required>
-                            <div class="labelLine" translate>Name</div>
-                            <div class="validationImages">
-                                <img class="validImg" src="../../assets/img/icons/valid.png">
-                                <img class="errorImg" src="../../assets/img/icons/error.png">
-                            </div>
-                            <div id="inputNote1" class="inputNote" translate>
-                                Your name is required
-                            </div>    
-                        </div>
-                    </div>
     
-                    <div class="inputContainer">
-                        <div class="inputSubContainer">
-                            <input type="email" name="email" formControlName="email" #emailField required>
-                            <div class="labelLine" translate>E-Mail</div>
-                            <div class="validationImages">
-                                <img class="validImg" src="../../assets/img/icons/valid.png">
-                                <img class="errorImg" src="../../assets/img/icons/error.png">
-                            </div>
-                            <div id="inputNote2" class="inputNote" translate>
-                                Your email is required
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="inputContainer">
-                        <div class="inputSubContainer">
-                            <textarea type="textarea" name="message" formControlName="message" #messageField required></textarea>
-                            <div class="labelLine" translate>Nachricht</div>
-                            <div class="validationImages">
-                                <img class="validImg" src="../../assets/img/icons/valid.png">
-                                <img class="errorImg" src="../../assets/img/icons/error.png">
-                            </div>
-                            <div id="inputNote3" class="inputNote" translate>
-                                A message is required
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="privacyPolicyConsent">
-                        <div class="containerLeft">
-                            <div id="checkboxContainer" class="checkboxContainer">
-                                <div class="checkboxTickContainer" [class.showTick]="privacyChecked">
-                                    <img id="checkboxTick" class="checkboxTick" src="../../assets/img/icons/checkboxTick.svg">
+        <div class="contactSubContainer">
+            <div class="title" translate>Kontakt</div>
+            <div>
+                <div>
+                    <div translate>Möchten Sie ein neues Projekt besprechen?</div>
+                    <div translate>Gerne unterstützte ich Sie bei der Verwirklichung Ihrer Ideen. Kontaktieren Sie mich über dieses Formular.</div>
+                    <div><span translate>Brauchen Sie einen Frontend-Entwickler? </span><b translate>Kontaktieren Sie mich!</b></div>
+                </div>
+                <div>
+                    <form #contactForm [formGroup]="profileForm" class="contactForm" (ngSubmit)="sendMail()" ngNativeValidate>
+                        <div class="inputContainer">
+                            <div class="inputSubContainer">
+                                <input type="text" name="name" formControlName="name" #nameField required>
+                                <div class="labelLine" translate>Name</div>
+                                <div class="validationImages">
+                                    <img class="validImg" src="../../assets/img/icons/valid.png">
+                                    <img class="errorImg" src="../../assets/img/icons/error.png">
                                 </div>
-                                <input (click)="acceptPrivacyPolicy()" #privacyField class="inputCheckbox" formControlName="privacyPolicy" type="checkbox" required>
-                                <div class="checkboxHoverContainer">
+                                <div id="inputNote1" class="inputNote" translate>
+                                    Your name is required
+                                </div>    
+                            </div>
+                        </div>
+        
+                        <div class="inputContainer">
+                            <div class="inputSubContainer">
+                                <input type="email" name="email" formControlName="email" #emailField required>
+                                <div class="labelLine" translate>E-Mail</div>
+                                <div class="validationImages">
+                                    <img class="validImg" src="../../assets/img/icons/valid.png">
+                                    <img class="errorImg" src="../../assets/img/icons/error.png">
+                                </div>
+                                <div id="inputNote2" class="inputNote" translate>
+                                    Your email is required
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <span translate>Ich habe die</span>
-                            <a (click)="showPrivacyPolicy()" translate>Datenschutzerklärung</a>
-                            <span translate>gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.</span>
+        
+                        <div class="inputContainer">
+                            <div class="inputSubContainer">
+                                <textarea type="textarea" name="message" formControlName="message" #messageField required></textarea>
+                                <div class="labelLine" translate>Nachricht</div>
+                                <div class="validationImages">
+                                    <img class="validImg" src="../../assets/img/icons/valid.png">
+                                    <img class="errorImg" src="../../assets/img/icons/error.png">
+                                </div>
+                                <div id="inputNote3" class="inputNote" translate>
+                                    A message is required
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <button type="submit" [disabled]="!profileForm.valid" class="button" #submitButton translate>Nachricht senden</button>
-                </form>
+                        
+                        <div class="privacyPolicyConsent">
+                            <div class="containerLeft">
+                                <div id="checkboxContainer" class="checkboxContainer">
+                                    <div class="checkboxTickContainer" [class.showTick]="privacyChecked">
+                                        <img id="checkboxTick" class="checkboxTick" src="../../assets/img/icons/checkboxTick.svg">
+                                    </div>
+                                    <input (click)="acceptPrivacyPolicy()" #privacyField class="inputCheckbox" formControlName="privacyPolicy" type="checkbox" required>
+                                    <div class="checkboxHoverContainer">
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <span translate>Ich habe die</span>
+                                <a (click)="showPrivacyPolicy()" translate>Datenschutzerklärung</a>
+                                <span translate>gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.</span>
+                            </div>
+                        </div>
+                        <button type="submit" [disabled]="!profileForm.valid" class="button" #submitButton translate>Nachricht senden</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="upButton">
-        <a href="#header">
-            <div class="defUpBtn"></div>
-        </a>
-    </div>
-
-    <!-- ================== SNACKBAR =============== -->
-    <div *ngIf="showSnackbar" class="messageSentSnackbar">
-        <div>
-            <div class="messageSent" translate>Nachricht gesendet</div>
+        <div class="upButton">
+            <a href="#header">
+                <div class="defUpBtn"></div>
+            </a>
         </div>
-    </div>
     
+        <!-- ================== SNACKBAR =============== -->
+        <div *ngIf="showSnackbar" class="messageSentSnackbar">
+            <div>
+                <div class="messageSent" translate>Nachricht gesendet</div>
+            </div>
+        </div>
+        
+    </div>    
 </div>
-
-

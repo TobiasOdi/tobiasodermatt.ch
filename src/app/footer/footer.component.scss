@@ -1,8 +1,11 @@
 @import '../../styles.scss';
 
+.backgroundFooter {
+    background: linear-gradient(128.94deg, $light-blue -33.96%, $blue 112.25%);
+}
+
 footer {
     height: 200px;
-    background: linear-gradient(128.94deg, $light-blue -33.96%, $blue 112.25%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -89,6 +92,7 @@ footer {
     top: 0;
     left: 0;
     width: 100%;
+    max-width: 1920px;
     height: 100%;
     display: flex;
     justify-content: center;

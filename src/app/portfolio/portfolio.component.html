@@ -1,118 +1,120 @@
-<div class="portfolioContainer siteLayout" id="portfolio">
-    <div class="title">
-        Portfolio
-    </div>
-    <div class="descriptionText" translate>
-        Dies ist eine Sammlung meiner bisherigen Projekte, welche gerne ausprobiert werden können.
-    </div>
-    <div class="filter">
-        <img src="../../assets/img/icons/filter.svg">
-        <div [class.activeFilter]="javaScriptProject && angularProject" class="button" (click)="filterAll()">
-            <div translate>Alle</div>
+<div class="backgroundPortfolio">
+    <div class="portfolioContainer siteLayout" id="portfolio">
+        <div class="title">
+            Portfolio
         </div>
-        <div [class.activeFilter]="angularProject && !javaScriptProject" class="button" (click)="filterAngular()">
-            <div>Angular</div>
+        <div class="descriptionText" translate>
+            Dies ist eine Sammlung meiner bisherigen Projekte, welche gerne ausprobiert werden können.
         </div>
-        <div [class.activeFilter]="javaScriptProject &&!angularProject" class="button" (click)="filterJavaScript()">
-            <div>JavaScript</div>
-        </div>
-    </div>
-    <div class="projects">
-        <div *ngIf="angularProject" class="project">
-            <div>
-                <img src="../../assets/img/project4.png">
-                <div class="overlay">
-                    <h2>Portfolio Webseite</h2>
-                    <a href="https://tobias-odermatt.ch" target="_blank">
-                        <img src="../../assets/img/icons/link_white.svg" />
-                    </a>
-                </div>
+        <div class="filter">
+            <img src="../../assets/img/icons/filter.svg">
+            <div [class.activeFilter]="javaScriptProject && angularProject" class="button" (click)="filterAll()">
+                <div translate>Alle</div>
             </div>
-            <div>
-                <div class="projectTitle">Tobias Odermatt</div>
-                <div class="usedSkills">
-                    <span>Angular | </span>
-                    <span>TypeScript</span>
-                </div>
-                <div class="projectDescription" translate>Portfolio Webseite auf welcher Sie sich zur Zeit befinden.</div>
-                <div class="projectButtonContainer">
-                    <a href="https://tobias-odermatt.ch" target="_blank" class="button liveTest">Live test</a>
-                    <a href="https://github.com/TobiasOdi/tobiasodermatt.ch" target="_blank" class="button">GitHub</a>
-                </div>
+            <div [class.activeFilter]="angularProject && !javaScriptProject" class="button" (click)="filterAngular()">
+                <div>Angular</div>
+            </div>
+            <div [class.activeFilter]="javaScriptProject &&!angularProject" class="button" (click)="filterJavaScript()">
+                <div>JavaScript</div>
             </div>
         </div>
-        <div *ngIf="javaScriptProject" class="project">
-            <div>
-                <img src="../../assets/img/project1_join2.png">
-                <div class="overlay">
-                    <h2>CRM Tool</h2>
-                    <a href="https://join.tobias-odermatt.ch" target="_blank">
-                        <img src="../../assets/img/icons/link_white.svg" />
-                    </a>
+        <div class="projects">
+            <div *ngIf="angularProject" class="project">
+                <div>
+                    <img src="../../assets/img/project4.png">
+                    <div class="overlay">
+                        <h2>Portfolio Webseite</h2>
+                        <a href="https://tobias-odermatt.ch" target="_blank">
+                            <img src="../../assets/img/icons/link_white.svg" />
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="projectTitle">Tobias Odermatt</div>
+                    <div class="usedSkills">
+                        <span>Angular | </span>
+                        <span>TypeScript</span>
+                    </div>
+                    <div class="projectDescription" translate>Portfolio Webseite auf welcher Sie sich zur Zeit befinden.</div>
+                    <div class="projectButtonContainer">
+                        <a href="https://tobias-odermatt.ch" target="_blank" class="button liveTest">Live test</a>
+                        <a href="https://github.com/TobiasOdi/tobiasodermatt.ch" target="_blank" class="button">GitHub</a>
+                    </div>
                 </div>
             </div>
-            <div>
-                <div class="projectTitle">JOIN</div>
-                <div class="usedSkills">
-                    <span>JavaScript | </span>
-                    <span>CSS | </span>
-                    <span>HTML</span>
+            <div *ngIf="javaScriptProject" class="project">
+                <div>
+                    <img src="../../assets/img/project1_join2.png">
+                    <div class="overlay">
+                        <h2>CRM Tool</h2>
+                        <a href="https://join.tobias-odermatt.ch" target="_blank">
+                            <img src="../../assets/img/icons/link_white.svg" />
+                        </a>
+                    </div>
                 </div>
-                <div class="projectDescription" translate>Taks-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.</div>
-                <div class="projectButtonContainer">
-                    <a href="https://join.tobias-odermatt.ch" target="_blank" class="button liveTest">Live test</a>
-                    <a href="https://github.com/TobiasOdi/Join.git" target="_blank" class="button">GitHub</a>
-                </div>
-            </div>
-        </div>
-        <div *ngIf="javaScriptProject" class="project">
-            <div>
-                <img src="../../assets/img/project2_elpolloloco3.png">
-                <div class="overlay">
-                    <h2>Game</h2>
-                    <a href="https://elpolloloco.tobias-odermatt.ch" target="_blank">
-                        <img src="../../assets/img/icons/link_white.svg" />
-                    </a>
-                </div>
-            </div>
-            <div>
-                <div class="projectTitle">El Pollo Loco</div>
-                <div class="usedSkills">
-                    <span>JavaScript | </span>
-                    <span>CSS | </span>
-                    <span>HTML</span>
-                </div>
-                <div class="projectDescription" translate>Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco Sauce zu finden, um gegen die verrückte Henne zu kämpfen.</div>
-                <div class="projectButtonContainer">
-                    <a href="https://elpolloloco.tobias-odermatt.ch" target="_blank" class="button liveTest">Live test</a>
-                    <a href="https://github.com/TobiasOdi/El-Pollo-Loco.git" target="_blank" class="button">GitHub</a>
+                <div>
+                    <div class="projectTitle">JOIN</div>
+                    <div class="usedSkills">
+                        <span>JavaScript | </span>
+                        <span>CSS | </span>
+                        <span>HTML</span>
+                    </div>
+                    <div class="projectDescription" translate>Taks-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.</div>
+                    <div class="projectButtonContainer">
+                        <a href="https://join.tobias-odermatt.ch" target="_blank" class="button liveTest">Live test</a>
+                        <a href="https://github.com/TobiasOdi/Join.git" target="_blank" class="button">GitHub</a>
+                    </div>
                 </div>
             </div>
-        </div>        
-        <div *ngIf="javaScriptProject" class="project">
-            <div>
-                <img src="../../assets/img/project3_pokedex1.png">
-                <div class="overlay">
-                    <h2>Web API</h2>
-                    <a href="https://pokedex.tobias-odermatt.ch" target="_blank">
-                        <img src="../../assets/img/icons/link_white.svg" />
-                    </a>
+            <div *ngIf="javaScriptProject" class="project">
+                <div>
+                    <img src="../../assets/img/project2_elpolloloco3.png">
+                    <div class="overlay">
+                        <h2>Game</h2>
+                        <a href="https://elpolloloco.tobias-odermatt.ch" target="_blank">
+                            <img src="../../assets/img/icons/link_white.svg" />
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="projectTitle">El Pollo Loco</div>
+                    <div class="usedSkills">
+                        <span>JavaScript | </span>
+                        <span>CSS | </span>
+                        <span>HTML</span>
+                    </div>
+                    <div class="projectDescription" translate>Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco Sauce zu finden, um gegen die verrückte Henne zu kämpfen.</div>
+                    <div class="projectButtonContainer">
+                        <a href="https://elpolloloco.tobias-odermatt.ch" target="_blank" class="button liveTest">Live test</a>
+                        <a href="https://github.com/TobiasOdi/El-Pollo-Loco.git" target="_blank" class="button">GitHub</a>
+                    </div>
+                </div>
+            </div>        
+            <div *ngIf="javaScriptProject" class="project">
+                <div>
+                    <img src="../../assets/img/project3_pokedex1.png">
+                    <div class="overlay">
+                        <h2>Web API</h2>
+                        <a href="https://pokedex.tobias-odermatt.ch" target="_blank">
+                            <img src="../../assets/img/icons/link_white.svg" />
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="projectTitle">Pokédex</div>
+                    <div class="usedSkills">
+                        <span>JavaScript | </span>
+                        <span>PokéAPI | </span>
+                        <span>CSS | </span>
+                        <span>HTML</span>
+                    </div>
+                    <div class="projectDescription" translate>Basierend auf der PokéAPI, einer einfachen Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.</div>
+                    <div class="projectButtonContainer">
+                        <a href="https://pokedex.tobias-odermatt.ch" target="_blank" class="button liveTest">Live test</a>
+                        <a href="https://github.com/TobiasOdi/Pokedex.git" target="_blank" class="button">GitHub</a>
+                    </div>
                 </div>
             </div>
-            <div>
-                <div class="projectTitle">Pokédex</div>
-                <div class="usedSkills">
-                    <span>JavaScript | </span>
-                    <span>PokéAPI | </span>
-                    <span>CSS | </span>
-                    <span>HTML</span>
-                </div>
-                <div class="projectDescription" translate>Basierend auf der PokéAPI, einer einfachen Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.</div>
-                <div class="projectButtonContainer">
-                    <a href="https://pokedex.tobias-odermatt.ch" target="_blank" class="button liveTest">Live test</a>
-                    <a href="https://github.com/TobiasOdi/Pokedex.git" target="_blank" class="button">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </div>      
+        </div>      
+    </div>    
 </div>

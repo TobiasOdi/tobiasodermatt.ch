@@ -1,99 +1,101 @@
-<header class="siteLayout" id="header">
-    <div class="desktopMenu">
-        <div class="desktopMenuLeftSide">
-            <div class="logoName">
+<div class="backgroundMenu">
+    <header class="siteLayout" id="header">
+        <div class="desktopMenu">
+            <div class="desktopMenuLeftSide">
+                <div class="logoName">
+                    <a href="https://tobias-odermatt.ch" target="_blank">TOBIAS</a>
+                    <a href="https://tobias-odermatt.ch" target="_blank">ODERMATT</a>
+                </div>
+                
+                <!-- =========== DARK MODE =========== -->
+                <!--[class.headerDark]="darkMode" => Element erhält die Klasse headerDark nur wenn die Variable darkMode 'true' ist
+                    [class.darkLinks]="darkMode" => Element erhält die Klasse darkLinks nur wenn die Variable darkMode 'true' ist
+                    <img routerLink="/" src="../../assets/img/icons/logo.png"> -->
+                <!-- *ngIf="!darkMode" // *ngIf="darkMode" -->
+    
+                <div class="switchContainer">
+                    <label class="switch">
+                        <input (click)="setLangValue()" type="checkbox" id="checkboxOne" [checked]="languageChange">
+                        <span class="slider round">
+                            <div class="language" >
+                                <div [class.languageActive]="languageChange">DE</div>
+                                <div>EN</div>
+                            </div>
+                        </span>
+                    </label>
+                </div>
+            </div>
+        
+            <div  class="desktopMenuRightSide">      
+                <div (click)="activeTab('aboutMe')" class="ankerContainer">
+                    <div class="ankerSubContainer">
+                        <a [class.selectedTab]="aboutMe" href="#aboutMe" translate>Über mich</a>
+                    </div>
+                    <div [class.blueLineMenu]="aboutMe"></div>
+                </div>
+                <div (click)="activeTab('skillSet')">
+                    <div class="ankerSubContainer">
+                        <a [class.selectedTab]="skillSet" href="#skills" translate>Skills</a>
+                    </div>
+                    <div [class.blueLineMenu]="skillSet"></div>
+                </div>
+                <div (click)="activeTab('portfolio')">
+                    <div class="ankerSubContainer">
+                        <a [class.selectedTab]="portfolio" href="#portfolio">Portfolio</a>
+                    </div>
+                    <div [class.blueLineMenu]="portfolio"></div>
+                </div>
+                <div (click)="activeTab('contact')">
+                    <div class="ankerSubContainer">
+                        <a [class.selectedTab]="contact" href="#contact" translate>Kontakt</a>
+                    </div>
+                    <div [class.blueLineMenu]="contact"></div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="mobileMenu">
+            <div routerLink="/" class="logoName">
                 <a href="https://tobias-odermatt.ch" target="_blank">TOBIAS</a>
                 <a href="https://tobias-odermatt.ch" target="_blank">ODERMATT</a>
             </div>
-            
-            <!-- =========== DARK MODE =========== -->
-            <!--[class.headerDark]="darkMode" => Element erhält die Klasse headerDark nur wenn die Variable darkMode 'true' ist
-                [class.darkLinks]="darkMode" => Element erhält die Klasse darkLinks nur wenn die Variable darkMode 'true' ist
-                <img routerLink="/" src="../../assets/img/icons/logo.png"> -->
-            <!-- *ngIf="!darkMode" // *ngIf="darkMode" -->
-
-            <div class="switchContainer">
+    
+            <div id="menuIcon" class="menuIcon" (click)="openMobileMenu()" [class.move]="mobileMenuOpenCheck">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    
+        <div class="mobileMenuOpen" *ngIf="mobileMenuOpenCheck">
+            <div class="mobileMenuOpenSubcontainer">
                 <label class="switch">
-                    <input (click)="setLangValue()" type="checkbox" id="checkboxOne" [checked]="languageChange">
+                    <input (click)="setLangValue()" type="checkbox" id="checkboxTwo" [checked]="languageChange">
                     <span class="slider round">
-                        <div class="language" >
-                            <div [class.languageActive]="languageChange">DE</div>
+                        <div class="language">
+                            <div>DE</div>
                             <div>EN</div>
                         </div>
                     </span>
                 </label>
-            </div>
-        </div>
-    
-        <div  class="desktopMenuRightSide">      
-            <div (click)="activeTab('aboutMe')" class="ankerContainer">
-                <div class="ankerSubContainer">
+        
+                <div (click)="activeTab('aboutMe')">
                     <a [class.selectedTab]="aboutMe" href="#aboutMe" translate>Über mich</a>
+                    <div [class.blueLineMenu]="aboutMe"></div>
                 </div>
-                <div [class.blueLineMenu]="aboutMe"></div>
-            </div>
-            <div (click)="activeTab('skillSet')">
-                <div class="ankerSubContainer">
+                <div (click)="activeTab('skillSet')">
                     <a [class.selectedTab]="skillSet" href="#skills" translate>Skills</a>
+                    <div [class.blueLineMenu]="skillSet"></div>
                 </div>
-                <div [class.blueLineMenu]="skillSet"></div>
-            </div>
-            <div (click)="activeTab('portfolio')">
-                <div class="ankerSubContainer">
-                    <a [class.selectedTab]="portfolio" href="#portfolio">Portfolio</a>
+                <div (click)="activeTab('portfolio')">
+                    <a [class.selectedTab]="portfolio" href="#portfolio">Portfolio</a>   
+                    <div [class.blueLineMenu]="portfolio"></div>
                 </div>
-                <div [class.blueLineMenu]="portfolio"></div>
-            </div>
-            <div (click)="activeTab('contact')">
-                <div class="ankerSubContainer">
-                    <a [class.selectedTab]="contact" href="#contact" translate>Kontakt</a>
-                </div>
-                <div [class.blueLineMenu]="contact"></div>
+                <div (click)="activeTab('contact')">
+                    <a [class.selectedTab]="contact" href="#contact" translate>Kontakt</a>   
+                    <div [class.blueLineMenu]="contact"></div>
+                </div>    
             </div>
         </div>
-    </div>
-
-    <div class="mobileMenu">
-        <div routerLink="/" class="logoName">
-            <a href="https://tobias-odermatt.ch" target="_blank">TOBIAS</a>
-            <a href="https://tobias-odermatt.ch" target="_blank">ODERMATT</a>
-        </div>
-
-        <div id="menuIcon" class="menuIcon" (click)="openMobileMenu()" [class.move]="mobileMenuOpenCheck">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-    </div>
-
-    <div class="mobileMenuOpen" *ngIf="mobileMenuOpenCheck">
-        <div class="mobileMenuOpenSubcontainer">
-            <label class="switch">
-                <input (click)="setLangValue()" type="checkbox" id="checkboxTwo" [checked]="languageChange">
-                <span class="slider round">
-                    <div class="language">
-                        <div>DE</div>
-                        <div>EN</div>
-                    </div>
-                </span>
-            </label>
-    
-            <div (click)="activeTab('aboutMe')">
-                <a [class.selectedTab]="aboutMe" href="#aboutMe" translate>Über mich</a>
-                <div [class.blueLineMenu]="aboutMe"></div>
-            </div>
-            <div (click)="activeTab('skillSet')">
-                <a [class.selectedTab]="skillSet" href="#skills" translate>Skills</a>
-                <div [class.blueLineMenu]="skillSet"></div>
-            </div>
-            <div (click)="activeTab('portfolio')">
-                <a [class.selectedTab]="portfolio" href="#portfolio">Portfolio</a>   
-                <div [class.blueLineMenu]="portfolio"></div>
-            </div>
-            <div (click)="activeTab('contact')">
-                <a [class.selectedTab]="contact" href="#contact" translate>Kontakt</a>   
-                <div [class.blueLineMenu]="contact"></div>
-            </div>    
-        </div>
-    </div>
-</header>
+    </header>
+</div>

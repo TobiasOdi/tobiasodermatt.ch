@@ -1,41 +1,43 @@
-<footer class="siteLayout">
-    <div class="imprintContainer" *ngIf="checkImprint">
-        <div click-stop-propagation class="imprintSubContainer">
-            <div class="imprint">
-                <app-imprint></app-imprint>
-            </div>  
-            <div class="buttonContainer">
-                <button (click)="showImprint()" class="button">Close</button>
+<div class="backgroundFooter">
+    <footer class="siteLayout">
+        <div class="imprintContainer" *ngIf="checkImprint">
+            <div class="imprintSubContainer">
+                <div class="imprint">
+                    <app-imprint></app-imprint>
+                </div>  
+                <div class="buttonContainer">
+                    <button (click)="showImprint()" class="button">Close</button>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="footerRowOne">
-        <div class="footerLogo">
-            <div routerLink="/" class="logoName">
-                <a href="https://tobias-odermatt.ch" target="_blank">TOBIAS</a>
-                <a href="https://tobias-odermatt.ch" target="_blank">ODERMATT</a>
+    
+        <div class="footerRowOne">
+            <div class="footerLogo">
+                <div routerLink="/" class="logoName">
+                    <a href="https://tobias-odermatt.ch" target="_blank">TOBIAS</a>
+                    <a href="https://tobias-odermatt.ch" target="_blank">ODERMATT</a>
+                </div>
+            </div>
+            <div>© Tobias Odermatt 2024</div>
+            <div>
+                <a href="https://github.com/TobiasOdi" target="_blank">
+                    <img src="../../assets/img/icons/Github_button.png" class="icon">
+                </a>
+                <a href="https://www.linkedin.com/in/tobias-odermatt-75a619247/" target="_blank">
+                    <img src="../../assets/img/icons/Linkedin_button.png" class="icon">
+                </a>
+                <a href="mailto: odermatt.tobias.w@gmail.com" target="_blank">
+                    <img src="../../assets/img/icons/Email_button.png" class="icon">
+                </a>
             </div>
         </div>
-        <div>© Tobias Odermatt 2024</div>
-        <div>
-            <a href="https://github.com/TobiasOdi" target="_blank">
-                <img src="../../assets/img/icons/Github_button.png" class="icon">
-            </a>
-            <a href="https://www.linkedin.com/in/tobias-odermatt-75a619247/" target="_blank">
-                <img src="../../assets/img/icons/Linkedin_button.png" class="icon">
-            </a>
-            <a href="mailto: odermatt.tobias.w@gmail.com" target="_blank">
-                <img src="../../assets/img/icons/Email_button.png" class="icon">
-            </a>
-        </div>
-    </div>
-    <div class="footerRowTwo">
-        <div class="footerImprintContainer">
-            <div class="imprintLink">
-                <a (click)="showImprint()" translate>Impressum</a>
-                <div class="whiteLine"></div>
+        <div class="footerRowTwo">
+            <div class="footerImprintContainer">
+                <div class="imprintLink">
+                    <a (click)="showImprint()" translate>Impressum</a>
+                    <div class="whiteLine"></div>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>    
+</div>

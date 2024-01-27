@@ -1,14 +1,16 @@
 @import '../../styles.scss';
 
+.backgroundHeader {
+    background: linear-gradient(#FFF 20%, $light-blue 60%, $blue 95%);
+}
+
 .headerContainer {
     height: calc(100vh - 80px);
     width: 100%;
     display: flex;
     justify-self: center;
     align-items: center;
-    background: linear-gradient(#FFF 20%, $light-blue 60%, $blue 95%);
-    /* background: linear-gradient(#FFF 30%, #EAF0FF); */
-
+    /* background: linear-gradient(#FFF 20%, $light-blue 60%, $blue 95%); */
     > div {
         width: 50%;
         display: flex;
