@@ -52,12 +52,16 @@ export class ContactComponent {
     formData.append('email', emailField.value);
     formData.append('message', messageField.value);
 
-    await fetch('https://formspree.io/f/mqkrkwra',
-      {
-        method: 'POST',
-        body: formData
-      }
-    )
+    try {
+      await fetch('https://formspree.io/f/mqkrkwra',
+        {
+          method: 'POST',
+          body: formData
+        }
+      )
+    } catch (e) {
+      console.log('Formspree error');
+    };
 
     nameField.disabled = false;
     emailField.disabled = false;
@@ -74,6 +78,7 @@ export class ContactComponent {
     this.showSnackbarFunction();
   }
 
+
   async showSnackbarFunction() {
     this.showSnackbar = true;
 
@@ -81,6 +86,20 @@ export class ContactComponent {
       this.showSnackbar = false;
     }, 3000);
   }
+
+  try {
+    await fetch('https://formspree.io/f/mqkrkwra',
+      {
+        method: 'POST',
+        body: formData
+      }
+    )  }
+  catch(err) {
+    ;
+  }
+
+
+
   
   showPrivacyPolicy() {
     if(this.checkPrivacyPolicy == false) {
