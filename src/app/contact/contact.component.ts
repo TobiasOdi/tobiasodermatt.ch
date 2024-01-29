@@ -7,9 +7,6 @@ import { FormControl, ReactiveFormsModule, FormGroup } from '@angular/forms';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
-
-
-
   profileForm = new FormGroup ({
     name: new FormControl(''),
     email: new FormControl(''),
@@ -53,8 +50,6 @@ export class ContactComponent {
     formData.append('name', nameField.value);
     formData.append('email', emailField.value);
     formData.append('message', messageField.value);
-
-    // Sendeanimation
 
     await fetch('https://formspree.io/f/mqkrkwra',
       {
