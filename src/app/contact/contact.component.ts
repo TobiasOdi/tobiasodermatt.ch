@@ -40,6 +40,7 @@ export class ContactComponent {
     let messageField = this.messageField.nativeElement;
     let privacyField = this.privacyField.nativeElement;
     let submitButton = this.submitButton.nativeElement;
+
     nameField.disabled = true;
     emailField.disabled = true;
     messageField.disabled = true;
@@ -70,6 +71,10 @@ export class ContactComponent {
     privacyField.checked = false;
     this.privacyChecked = false;
 
+    this.showSnackbarFunction();
+  }
+
+  async showSnackbarFunction() {
     this.showSnackbar = true;
 
     setTimeout(() => {
