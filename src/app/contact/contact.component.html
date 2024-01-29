@@ -74,12 +74,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div *ngIf="!languageChangeContact">
+                            <div *ngIf="!languageChangeContact" class="privacyDE">
                                 <span>Ich habe die</span>
                                 <div><a (click)="showPrivacyPolicy()">Datenschutzerklärung</a></div>
                                 <span>gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.</span>
                             </div>
-                            <div *ngIf="languageChangeContact">
+                            <div *ngIf="languageChangeContact" class="privacyEN">
                                 <span>I've read the</span>
                                 <div><a (click)="showPrivacyPolicy()">privacy policy</a></div>
                                 <span>and agree to the processing of my data as outlined.</span>

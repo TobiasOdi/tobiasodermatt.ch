@@ -400,7 +400,8 @@
     margin-right: 5px;
 }
 
-.privacyPolicyConsent > div:last-of-type > div a {
+.privacyPolicyConsent > .privacyDE > div a,
+.privacyPolicyConsent > .privacyEN > div a {
     cursor: pointer;
     text-decoration: none;
     color: $light-blue;
@@ -415,14 +416,23 @@
     }
 }
 
-.privacyPolicyConsent > div:last-of-type > div a::after {
-    content: "Datenschutzerklärung";
+.privacyPolicyConsent > .privacyDE > div a::after,
+.privacyPolicyConsent > .privacyEN > div a::after {
     display: block;
     height: 0;
     visibility: hidden;
     overflow: hidden;
     font-weight: bold;
     font-size: 16px;        
+}
+
+
+.privacyPolicyConsent > .privacyDE > div a::after {
+    content: "Datenschutzerklärung";
+}
+
+.privacyPolicyConsent > .privacyEN > div a::after {
+    content: "privacy policy";       
 }
 
 .messageSentSnackbar {
