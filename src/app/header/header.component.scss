@@ -5,7 +5,6 @@
 }
 
 .headerContainer {
-    height: calc(100vh - 80px);
     width: 100%;
     display: flex;
     justify-self: center;
@@ -29,7 +28,8 @@
 .profilePicture {
     width: auto;
     max-width: 100%;
-    height: calc(100vh - 80px);
+    max-height: calc(100vh - 80px);
+    height: auto;
 }
 
 .headerSubContainer {
