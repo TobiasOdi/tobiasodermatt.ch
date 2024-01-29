@@ -1,4 +1,4 @@
-<div class="backgroundMenu">
+<div class="backgroundMenu background">
     <header class="siteLayout" id="header">
         <div class="desktopMenu">
             <div class="desktopMenuLeftSide">
@@ -15,10 +15,10 @@
     
                 <div class="switchContainer">
                     <label class="switch">
-                        <input (click)="setLangValue()" type="checkbox" id="checkboxOne" [checked]="languageChange">
+                        <input (click)="setLangValue()" type="checkbox" id="checkboxOne" [checked]="languageChangeMenu">
                         <span class="slider round">
                             <div class="language" >
-                                <div [class.languageActive]="languageChange">DE</div>
+                                <div [class.languageActive]="languageChangeMenu">DE</div>
                                 <div>EN</div>
                             </div>
                         </span>
@@ -70,7 +70,7 @@
         <div class="mobileMenuOpen" *ngIf="mobileMenuOpenCheck">
             <div class="mobileMenuOpenSubcontainer">
                 <label class="switch">
-                    <input (click)="setLangValue()" type="checkbox" id="checkboxTwo" [checked]="languageChange">
+                    <input (click)="setLangValue()" type="checkbox" id="checkboxTwo" [checked]="languageChangeMenu">
                     <span class="slider round">
                         <div class="language">
                             <div>DE</div>

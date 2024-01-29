@@ -1,11 +1,15 @@
 import { Component, OnInit, ElementRef, Input, ViewChild } from '@angular/core';
 import { FormControl, ReactiveFormsModule, FormGroup } from '@angular/forms';
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
+
+
+
   profileForm = new FormGroup ({
     name: new FormControl(''),
     email: new FormControl(''),
@@ -13,9 +17,11 @@ export class ContactComponent {
     privacyPolicy: new FormControl('')
   });
   
+  @Input() languageChangeContact: boolean = false;
   @Input() checkPrivacyPolicy = false;
   @Input() showSnackbar: boolean = false;
   @Input() privacyChecked = false;
+
   @ViewChild('contactForm') contactForm!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
   @ViewChild('emailField') emailField!: ElementRef;

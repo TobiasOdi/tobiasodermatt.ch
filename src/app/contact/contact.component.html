@@ -1,4 +1,4 @@
-<div class="backgroundContact">
+<div class="backgroundContact background">
     <div class="contactContainer siteLayout" id="contact">
         <div class="privacyPolicyContainer" *ngIf="checkPrivacyPolicy">
             <div class="privacyPolicySubContainer">
@@ -74,10 +74,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div>
-                                <span translate>Ich habe die</span>
-                                <a (click)="showPrivacyPolicy()" translate>Datenschutzerklärung</a>
-                                <span translate>gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.</span>
+                            <div *ngIf="!languageChangeContact">
+                                <span>Ich habe die</span>
+                                <div><a (click)="showPrivacyPolicy()">Datenschutzerklärung</a></div>
+                                <span>gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.</span>
+                            </div>
+                            <div *ngIf="languageChangeContact">
+                                <span>I've read the</span>
+                                <div><a (click)="showPrivacyPolicy()">privacy policy</a></div>
+                                <span>and agree to the processing of my data as outlined.</span>
                             </div>
                         </div>
                         <button type="submit" [disabled]="!profileForm.valid" class="button" #submitButton translate>Nachricht senden</button>

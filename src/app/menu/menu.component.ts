@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, Output, SimpleChanges } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 
 @Component({
@@ -8,8 +8,9 @@ import {TranslateService} from '@ngx-translate/core';
 })
 
 export class MenuComponent {
-  //@Input() darkMode = false;
-  languageChange:boolean = false;
+  @Input() languageChangeMenu: boolean = false;
+  @Output() languageChangeUpdate = new EventEmitter<boolean>(); 
+
   @Input() aboutMe = true;
   @Input() skillSet = false;
   @Input() portfolio = false;
@@ -28,29 +29,34 @@ export class MenuComponent {
     //translate.use('en'); 
   }
 
-  setLangValue() {
-    if(!this.languageChange) {
+setLangValue() {
+    if(!this.languageChangeMenu) {
       this.translate.use('en');
-      this.languageChange = true;
+      this.languageChangeMenu = true;
+      this.languageChangeUpdate.emit(this.languageChangeMenu);
 
       if (this.checkboxOne != null && this.checkboxTwo != null) {
         this.checkboxOne.checked = true;
         this.checkboxTwo.checked = true;
       }
 
-    } else if(this.languageChange) {
+    } else if(this.languageChangeMenu) {
       this.translate.use('de');
-      this.languageChange = false;
+      this.languageChangeMenu = false;
+      this.languageChangeUpdate.emit(this.languageChangeMenu);
 
       if (this.checkboxOne != null &&this.checkboxTwo != null) {
         this.checkboxOne.checked = false;
         this.checkboxTwo.checked = false;
-
       }
     }      
   }
 
-  activeTab(acitveTab:any) {
+  ngOnChanges(changes: SimpleChanges) {
+    console.log(changes)
+  }
+
+  activeTab(acitveTab:string) {
     this.aboutMe = false;
     this.skillSet = false;
     this.portfolio = false;
