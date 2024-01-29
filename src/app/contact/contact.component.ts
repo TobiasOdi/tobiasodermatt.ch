@@ -86,20 +86,6 @@ export class ContactComponent {
       this.showSnackbar = false;
     }, 3000);
   }
-
-  try {
-    await fetch('https://formspree.io/f/mqkrkwra',
-      {
-        method: 'POST',
-        body: formData
-      }
-    )  }
-  catch(err) {
-    ;
-  }
-
-
-
   
   showPrivacyPolicy() {
     if(this.checkPrivacyPolicy == false) {
