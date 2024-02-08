@@ -32,40 +32,29 @@
     }
 }
 
-.skillsIcons {
+.skillIconsContainer {
     width: 100%;
-    padding-bottom: 2rem;
-}
-
-.firstRow {
     display: grid;
-    gap: 1rem;
+/*     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; */
+
+    //grid-template-columns: repeat(5, 1fr);
     grid-template-columns: repeat(5, minmax(90px,1fr));
     grid-template-rows: repeat(2);
-}
 
- .firstRow > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
-
-
-/* ================== RESPONSIVENESS ================== */
-@media (max-width: 1000px) {
-    .firstRow {
-        padding-left: 2rem;
-        padding-right: 2rem;
+    > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
-@media (max-width: 720px) {
-    .firstRow {
-        padding-left: 0;
-        padding-right: 0;
-        grid-template-columns: repeat(auto-fit, minmax(90px,1fr));
-        grid-template-rows: repeat(2);
 
+
+/* ================== RESPONSIVENESS ================== */
+@media (max-width: 720px) {
+    .skillIconsContainer {
         > div > img {
             width: 60px;
             height: auto;
@@ -73,12 +62,33 @@
     }
 }
 
+@media (max-width: 540px) {
+    .skillIconsContainer {
+        grid-template-columns: repeat(4, minmax(90px,1fr));
+        grid-template-rows: repeat(3);
+    }
+}
+
 @media (max-width: 480px) {
-    .firstRow, 
+    .skillIconsContainer, 
     .secondRow {
         > div > img {
             width: 50px;
             height: auto;
         }
+    }
+}
+
+@media (max-width: 400px) {
+    .skillIconsContainer {
+        grid-template-columns: repeat(3, minmax(90px,1fr));
+        grid-template-rows: repeat(4);
+    }
+}
+
+@media (max-width: 320px) {
+    .skillIconsContainer {
+        grid-template-columns: repeat(2, minmax(90px,1fr));
+        grid-template-rows: repeat(5);
     }
 }
