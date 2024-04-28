@@ -11,6 +11,17 @@ $light-blue: #475FBC;
 $very-light-blue: #676eac;
 
 /* ================================================================ GENERAL ====================================================== */
+@font-face {
+  font-family: 'Baloo 2';
+  src: url(assets/fonts/baloo-2-v21-latin-regular.woff2);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(assets/fonts/montserrat-v26-latin-regular.woff2);
+}
+
+
 * {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;

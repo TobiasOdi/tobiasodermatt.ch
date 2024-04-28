@@ -4,7 +4,7 @@
     font-family: 'Tilt Neon';
     font-style: normal;
     font-weight: 400;
-    src: url('./tilt-neon-v10-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('./assets/fonts/tilt-neon-v10-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* gabarito-regular - latin */
@@ -13,7 +13,7 @@
     font-family: 'Gabarito';
     font-style: normal;
     font-weight: 400;
-    src: url('./gabarito-v1-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('./assets/fonts/gabarito-v1-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
 
 /* gabarito-700 - latin */
@@ -22,7 +22,7 @@ font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@f
 font-family: 'Gabarito';
 font-style: normal;
 font-weight: 700;
-src: url('./gabarito-v1-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+src: url('./assets/fonts/gabarito-v1-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* jost-regular - latin */
@@ -31,7 +31,7 @@ src: url('./gabarito-v1-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 
     font-family: 'Jost';
     font-style: normal;
     font-weight: 400;
-    src: url('./jost-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('./assets/fonts/jost-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
 /* jost-italic - latin */
 @font-face {
@@ -39,7 +39,7 @@ font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@f
 font-family: 'Jost';
 font-style: italic;
 font-weight: 400;
-src: url('./jost-v15-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+src: url('./assets/fonts/jost-v15-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* jost-700 - latin */
 @font-face {
@@ -47,7 +47,7 @@ font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@f
 font-family: 'Jost';
 font-style: normal;
 font-weight: 700;
-src: url('./jost-v15-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+src: url('./assets/fonts/jost-v15-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* comfortaa-regular - latin */
@@ -56,7 +56,7 @@ src: url('./jost-v15-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 400;
-    src: url('./comfortaa-v45-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('./assets/fonts/comfortaa-v45-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
 /* comfortaa-700 - latin */
 @font-face {
@@ -64,7 +64,7 @@ font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@f
 font-family: 'Comfortaa';
 font-style: normal;
 font-weight: 700;
-src: url('./comfortaa-v45-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+src: url('./assets/fonts/comfortaa-v45-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* montserrat-regular - latin */
@@ -73,7 +73,7 @@ src: url('./comfortaa-v45-latin-700.woff2') format('woff2'); /* Chrome 36+, Oper
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  src: url('./montserrat-v26-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('./assets/fonts/montserrat-v26-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* montserrat-italic - latin */
 @font-face {
@@ -81,7 +81,7 @@ src: url('./comfortaa-v45-latin-700.woff2') format('woff2'); /* Chrome 36+, Oper
   font-family: 'Montserrat';
   font-style: italic;
   font-weight: 400;
-  src: url('./montserrat-v26-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('./assets/fonts/montserrat-v26-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* montserrat-700 - latin */
 @font-face {
@@ -89,7 +89,7 @@ src: url('./comfortaa-v45-latin-700.woff2') format('woff2'); /* Chrome 36+, Oper
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
-  src: url('./montserrat-v26-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('./assets/fonts/montserrat-v26-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* montserrat-700italic - latin */
 @font-face {
@@ -97,7 +97,7 @@ src: url('./comfortaa-v45-latin-700.woff2') format('woff2'); /* Chrome 36+, Oper
   font-family: 'Montserrat';
   font-style: italic;
   font-weight: 700;
-  src: url('./montserrat-v26-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('./assets/fonts/montserrat-v26-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* baloo-2-regular - latin */
@@ -106,7 +106,7 @@ src: url('./comfortaa-v45-latin-700.woff2') format('woff2'); /* Chrome 36+, Oper
   font-family: 'Baloo 2';
   font-style: normal;
   font-weight: 400;
-  src: url('./baloo-2-v21-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('./assets/fonts/baloo-2-v21-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* baloo-2-700 - latin */
 @font-face {
@@ -114,5 +114,5 @@ src: url('./comfortaa-v45-latin-700.woff2') format('woff2'); /* Chrome 36+, Oper
   font-family: 'Baloo 2';
   font-style: normal;
   font-weight: 700;
-  src: url('./baloo-2-v21-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('./assets/fonts/baloo-2-v21-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
