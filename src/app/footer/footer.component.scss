@@ -81,10 +81,12 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
+    transition: all 125ms ease-in-out;
 }
 
 .footerRowOne > div:last-of-type > a:hover {
     scale: 1.2;
+    transition: all 125ms ease-in-out;
 }
 
 /* ========================= IMPRINT ============================ */
