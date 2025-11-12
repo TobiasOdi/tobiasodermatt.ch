@@ -10,6 +10,17 @@
                 </div>
             </div>
         </div>
+
+        <div class="imprintContainer" *ngIf="checkDataprotection">
+            <div class="imprintSubContainer">
+                <div class="imprint">
+                    <app-data-protection></app-data-protection>
+                </div>  
+                <div class="buttonContainer">
+                    <button (click)="showDataprotection()" class="button">Close</button>
+                </div>
+            </div>
+        </div>
     
         <div class="footerRowOne">
             <div class="footerLogo">
@@ -35,6 +46,10 @@
             <div class="footerImprintContainer">
                 <div class="imprintLink">
                     <a (click)="showImprint()" translate>Impressum</a>
+                    <div class="whiteLine"></div>
+                </div>
+                <div class="imprintLink">
+                    <a (click)="showDataprotection()" translate>Datenschutzerklärung</a>
                     <div class="whiteLine"></div>
                 </div>
             </div>

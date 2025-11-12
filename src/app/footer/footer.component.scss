@@ -46,7 +46,8 @@ footer {
 }
 
 .footerRowOne > div:nth-of-type(2),
-.footerImprintContainer > div {
+.footerImprintContainer > div,
+.footerImprintContainer > div  {
     color: white;
 }
 
@@ -89,7 +90,7 @@ footer {
     transition: all 125ms ease-in-out;
 }
 
-/* ========================= IMPRINT ============================ */
+/* ========================= IMPRINT / DATAPROTECTION ============================ */
 .imprintContainer {
     position: fixed;
     top: 0;
